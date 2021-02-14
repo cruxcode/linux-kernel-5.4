@@ -7,6 +7,15 @@
 #define PSTRACE_BUF_SIZE 500	/* The maximum size of the ring buffer */
 
 /*
+1. At the moment we will only track state changes of given pids (or all pids if -1 is sent) after the enable_function is called. This means if a process is in exit zombie when the call was made, we will not keep track of that - when it becomes exit dead, we will be able to track it. Need to check if we should track current state of a process too.
+2. Currently, the plan is to call the pstrace_add from all the necessary places (such as core.c) and pstrace_add will do the check to add into ring buffer.
+3. Datastructure to be used for ring buffer - hashmap or circular linked list.
+4. Need to add the get_root function from hw2 to check if pid exists. Is there another way to do this?
+*/
+
+
+
+/*
  * Syscall No. 436
  * Enable the tracing for @pid. If -1 is given, trace all processes.
  */
