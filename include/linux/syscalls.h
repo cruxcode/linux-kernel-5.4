@@ -83,6 +83,7 @@ struct clone_args;
 #include <linux/key.h>
 #include <linux/personality.h>
 #include <trace/syscall.h>
+#include <linux/pstrace.h>
 
 #ifdef CONFIG_ARCH_HAS_SYSCALL_WRAPPER
 /*
@@ -1138,6 +1139,14 @@ asmlinkage long sys_sigaction(int, const struct old_sigaction __user *,
 asmlinkage long sys_sgetmask(void);
 asmlinkage long sys_ssetmask(int newmask);
 asmlinkage long sys_signal(int sig, __sighandler_t handler);
+
+/*kernel/pstrace.c*/
+asmlinkage long sys_pstrace_enable(pid_t pid);
+asmlinkage long sys_pstrace_disable(pid_t pid);
+asmlinkage long sys_pstrace_get(pid_t pid, struct pstrace *buf, int *counter);
+asmlinkage long sys_pstrace_clear(pid_t pid);
+void pstrace_add(struct task_struct *p);
+
 
 /* obsolete: kernel/sched/core.c */
 asmlinkage long sys_nice(int increment);
