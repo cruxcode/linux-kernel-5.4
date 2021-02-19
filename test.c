@@ -10,6 +10,13 @@
 
 //end of handlers and structures
 
+/*
+436 - enable
+437 - disable
+438 - get
+439 - pstrace_clear
+*/
+
 int main(int argc, char **argv)
 {
 	struct prinfo *buf;
@@ -24,3 +31,14 @@ int main(int argc, char **argv)
 
 	return result;
 }
+
+/*using the counter value that is returned from the sys 
+call to make successive calls to prove that results 
+are in a chronological order:
+First pass:
+1. enable all pids to be tracked.
+2. get with pid = 0.
+3. keep getting with subsequent counters that have been returned.
+*/
+
+
