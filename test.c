@@ -22,11 +22,16 @@ struct pstrace {
 
 int main()
 {
-        pid_t pid = 0;
+        pid_t pid = -1;
         struct pstrace *buf = malloc(500*sizeof(struct pstrace));
-        long counter = 15;
-        syscall(438, pid, buf, &counter);
-        printf("syscall result %ld", counter);
+        long counter = 0;
+	syscall(436, pid);
+	syscall(438, pid, buf, &counter);
+        printf("syscall result %ld\n", counter);
+	syscall(438, pid, buf, &counter);
+        printf("syscall result %ld\n", counter);
+	syscall(439, pid);
+	printf("Clear done\n");
 }
 
 /*using the counter value that is returned from the sys 
