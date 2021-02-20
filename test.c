@@ -1,12 +1,8 @@
-#include <string.h>
-#include <errno.h>
+#include <unistd.h>
+#include <sys/syscall.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <signal.h>
-#include <string.h>
-#include <linux/types.h>
-
+#include <sys/types.h>
 
 //end of handlers and structures
 
@@ -17,19 +13,20 @@
 439 - pstrace_clear
 */
 
-int main(int argc, char **argv)
-{
-	struct prinfo *buf;
-	int *nr;
-	pid_t pid = 0;
-	long result;
-	result = syscall(436, pid);
-	result = syscall(437, pid);
-	result = syscall(439, pid);
-	result = syscall(438, pid ,buf, nr);
-	result = syscall(439, pid);
+/* The data structure used to save the traced process. */
+struct pstrace {
+        char comm[16];          /* The name of the process */
+        pid_t pid;              /* The pid of the process */
+        long state;             /* The state of the process */
+};
 
-	return result;
+int main()
+{
+        pid_t pid = 0;
+        struct pstrace *buf = malloc(500*sizeof(struct pstrace));
+        long counter = 15;
+        syscall(438, pid, buf, &counter);
+        printf("syscall result %ld", counter);
 }
 
 /*using the counter value that is returned from the sys 
