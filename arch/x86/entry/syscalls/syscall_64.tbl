@@ -360,7 +360,7 @@
 436	common	pstrace_enable		__x64_sys_pstrace_enable
 437	common	pstrace_disable		__x64_sys_pstrace_disable
 438	common	pstrace_get		__x64_sys_pstrace_get
-438	common	pstrace_clear		__x64_sys_pstrace_clear
+439	common	pstrace_clear		__x64_sys_pstrace_clear
 
 #
 # x32-specific system call numbers start at 512 to avoid cache impact
