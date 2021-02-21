@@ -17,10 +17,10 @@ int main(int argc, char **argv)
 {
 	struct pstrace *buf = malloc(5*sizeof(struct pstrace));
 	long *counter = malloc(sizeof(long));
-	*counter = 100000;
+	*counter = 1;
 	syscall(436, -1);
 	printf("after enable before get\n");
-	for(int j = 0; j < 2; j++){
+	for(int j = 0; j < 5; j++){
 		syscall(438, -1 ,buf, counter);
 		for(int i=0; i<5; i++){
 			struct pstrace *res = buf + i;
