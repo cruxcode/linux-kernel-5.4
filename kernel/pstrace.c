@@ -12,27 +12,27 @@ SYSCALL_DEFINE1(pstrace_enable,
 {
 	unsigned long flags;
 	printk("[pstrace_enable]");
+	spin_lock_irqsave(&process_list_lock, flags);
 	if(tracking_mode == TRACK_ALL || tracking_mode == TRACK_ALL_EXCEPT){
+		spin_unlock_irqrestore(&process_list_lock, flags);
 		return 0;
 	}
 	else if(pid == -1){
-		spin_lock_irqsave(&process_list_lock, flags);
 		tracking_mode = TRACK_ALL;
-		spin_unlock_irqrestore(&process_list_lock, flags);
+		reset_enabled_and_disabled();
 	}
 	else{
-		spin_lock_irqsave(&process_list_lock, flags);
 		int loc = check_if_process_in_list(enabled_processes, pid,enabled_process_count);
 		if(loc == -1){
 			tracking_mode = TRACK_SOME;
 			enabled_processes[enabled_process_count] = pid;
 			enabled_process_count = enabled_process_count + 1;
-			spin_unlock_irqrestore(&process_list_lock, flags);
 		}else{
 			spin_unlock_irqrestore(&process_list_lock, flags);
 			return -1; //what happens if pid is already in enable list?
 		}
 	}
+	spin_unlock_irqrestore(&process_list_lock, flags);
 	printk("[pstrace_enable] tracking mode set to %d", tracking_mode);
 	return 0;
 }
@@ -44,9 +44,38 @@ SYSCALL_DEFINE1(pstrace_enable,
 SYSCALL_DEFINE1(pstrace_disable,
 		pid_t, pid)
 {
+	unsigned long flags;
 	printk("[pstrace_disable]");
-	if(pid == -1)
+	spin_lock_irqsave(&process_list_lock, flags);
+	if(tracking_mode == TRACK_NONE){
+		spin_unlock_irqrestore(&process_list_lock, flags);
+		return 0;
+	}
+	else if(pid == -1){
 		tracking_mode = TRACK_NONE;
+		reset_enabled_and_disabled();
+	}
+	else if(tracking_mode == TRACK_ALL || tracking_mode == TRACK_ALL_EXCEPT){
+		 if(check_if_process_in_list(disabled_processes, pid,disabled_process_count) != -1){
+			spin_unlock_irqrestore(&process_list_lock, flags);
+			return 0;
+		}
+		else{
+			tracking_mode = TRACK_ALL_EXCEPT;
+			disabled_processes[disabled_process_count] = pid;
+			disabled_process_count = disabled_process_count + 1;
+		}
+	}else{
+		int loc = check_if_process_in_list(enabled_processes, pid,enabled_process_count);
+		if(loc >= 0){
+			enabled_processes[loc] = -1;
+		}
+		else{
+			spin_unlock_irqrestore(&process_list_lock, flags);
+			return -1;
+		}
+	}
+	spin_unlock_irqrestore(&process_list_lock, flags);
 	printk("[pstrace_disable] tracking mode set to %d", tracking_mode);
 	return 0;
 }
@@ -178,7 +207,14 @@ void pstrace_add(struct task_struct *p){
 	unsigned long request_list_flags;
 	if(p->state == TASK_STOPPED || p->state == TASK_INTERRUPTIBLE || p->state == TASK_UNINTERRUPTIBLE|| p->state == TASK_RUNNING){
 		//printk("[pstrace_add]");
-		if (tracking_mode == TRACK_ALL){
+		spin_lock_irqsave(&process_list_lock, flags);
+		if (tracking_mode == TRACK_ALL || 
+			(tracking_mode == TRACK_ALL_EXCEPT && check_if_process_in_list(disabled_processes, p->pid,disabled_process_count)==-1) 
+			|| 
+			(tracking_mode == TRACK_SOME && check_if_process_in_list(enabled_processes, p->pid,enabled_process_count)!=-1) 
+			){
+			spin_unlock_irqrestore(&process_list_lock, flags);
+
 			local_irq_save(flags);
 			spin_lock_irqsave(&request_list_lock, request_list_flags);
 			spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
@@ -203,6 +239,9 @@ void pstrace_add(struct task_struct *p){
 			spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
 			spin_unlock_irqrestore(&request_list_lock, request_list_flags);
 			local_irq_restore(flags);
-		}				
+		}else{
+			spin_unlock_irqrestore(&process_list_lock, flags);
+		}
+				
 	}
 }

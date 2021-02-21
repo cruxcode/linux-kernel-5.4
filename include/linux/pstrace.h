@@ -120,8 +120,20 @@ void thread_cleanup(struct task_struct *p)
 int check_if_process_in_list(pid_t * processes_list,pid_t curr_pid,int count){
 	int i;
 	for(i = 0; i < count ; ++i)
-  		if(curr_pid == processes_list[i])
+  		if(curr_pid == processes_list[i] && curr_pid != -1)
 			return i;
 	return -1;
+}
+
+
+int reset_enabled_and_disabled(void){
+	int i,j;
+	for(i = 0; i < enabled_process_count; i++)
+  		enabled_processes[i] = -1;
+	for(j = 0; j < disabled_process_count ; j++)
+  		disabled_processes[j] = -1;
+	enabled_process_count = 0;
+	disabled_process_count = 0;
+	return 0;
 }
 
