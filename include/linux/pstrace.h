@@ -60,8 +60,8 @@ void create_request(struct request * req, pid_t pid, long *counter, struct pstra
 
 int save_request(struct request *req)
 {
-	list_add_tail(&req->list, &request_list_head);
 	struct request *new_req;
+	list_add_tail(&req->list, &request_list_head);
 
 	new_req = list_last_entry(&request_list_head, struct request, list);
 	if(new_req == req){
@@ -95,8 +95,8 @@ int listener_fn(void *data)
 
 struct task_struct *listener(struct request *data){
 	struct task_struct *p;
-	printk("[listener] called");
 	char name[] = "pstrace_thread";
+	printk("[listener] called");
 	p = kthread_run(listener_fn, data, name);
 	if(!p){
 		printk("[listener] task_struct failed to create, null pointer");	

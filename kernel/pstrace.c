@@ -130,7 +130,8 @@ SYSCALL_DEFINE3(pstrace_get,
 			return -ENOMEM;
 		}
 
-		if(*kcounter <= ring_buffer.counter){
+		printk("[pstrace_enable] coun ter value %ld buffer counter %ld",*kcounter, ring_buffer.counter );
+		if((*kcounter)+PSTRACE_BUF_SIZE <= ring_buffer.counter){
 			//Call add to buffer here
 			success = copy_to_user(buf, kbuf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
 			if (success != 0){
@@ -227,8 +228,9 @@ void pstrace_add(struct task_struct *p){
 	unsigned long flags;
 	unsigned long ring_buf_flags;
 	unsigned long request_list_flags;
-	if(/*p->state == TASK_STOPPED || p->state == TASK_INTERRUPTIBLE || p->state == TASK_UNINTERRUPTIBLE|| p->state == TASK_RUNNING||*/ 
-		p->state == EXIT_DEAD || p->state == EXIT_ZOMBIE){
+	if(p->state == TASK_STOPPED || p->state == TASK_INTERRUPTIBLE 
+		|| p->state == TASK_UNINTERRUPTIBLE|| p->state == TASK_RUNNING
+		|| p->exit_state == EXIT_DEAD || p->exit_state == EXIT_ZOMBIE){
 		//printk("[pstrace_add]");
 		spin_lock_irqsave(&process_list_lock, flags);
 		if (tracking_mode == TRACK_ALL || 
@@ -238,7 +240,6 @@ void pstrace_add(struct task_struct *p){
 			){
 			struct request *pos, *next;
 			spin_unlock_irqrestore(&process_list_lock, flags);
-
 			local_irq_save(flags);
 			spin_lock_irqsave(&request_list_lock, request_list_flags);
 			spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
