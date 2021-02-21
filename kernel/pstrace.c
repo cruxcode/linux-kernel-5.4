@@ -3,7 +3,7 @@
 #include<linux/syscalls.h>
 #include<linux/uaccess.h>
 #include<linux/pstrace.h>
-
+#include <linux/slab.h>
 /*
  * Syscall No. 436
  * Enable the tracing for @pid. If -1 is given, trace all processes.
@@ -12,6 +12,9 @@ SYSCALL_DEFINE1(pstrace_enable,
 		pid_t, pid)
 {
 	printk("[pstrace_enable]");
+	if(pid == -1)
+		tracking_mode = TRACK_ALL;
+	printk("[pstrace_enable] tracking mode set to %d", tracking_mode);
 	return 0;
 }
 
@@ -23,6 +26,9 @@ SYSCALL_DEFINE1(pstrace_disable,
 		pid_t, pid)
 {
 	printk("[pstrace_disable]");
+	if(pid == -1)
+		tracking_mode = TRACK_NONE;
+	printk("[pstrace_disable] tracking mode set to %d", tracking_mode);
 	return 0;
 }
 /*
@@ -42,6 +48,64 @@ SYSCALL_DEFINE3(pstrace_get,
 		long __user * , counter)
 {
 	printk("[pstrace_get]");
+	int success;
+
+	if(tracking_mode == TRACK_ALL){
+		long *kcounter;
+		struct pstrace *kbuf;
+
+		kcounter = kmalloc(sizeof(long), GFP_KERNEL);
+		if(!kcounter)
+			return -ENOMEM;
+		success = copy_from_user(kcounter, counter, sizeof(long));
+		if(success != 0){
+			kfree(kcounter);
+			return -EFAULT;
+		}
+
+		kbuf = kmalloc(sizeof(struct pstrace)*PSTRACE_BUF_SIZE, GFP_KERNEL);
+		if (!kbuf) {
+			kfree(kcounter);
+			return -ENOMEM;
+		}
+		
+		struct request *req;
+		
+		req = kmalloc(sizeof(struct request), GFP_KERNEL);
+
+		if(!req){
+			kfree(kbuf);
+			kfree(kcounter);
+			return -ENOMEM;
+		}
+
+		unsigned long flags;
+
+		spin_lock_irqsave(&request_list_lock, flags);
+		success = save_request(req);
+		spin_unlock_irqrestore(&request_list_lock, flags);
+		if(success < 0){
+			kfree(req);
+			kfree(kbuf);
+			kfree(kcounter);
+			return -ENOMEM;
+		}
+
+		DEFINE_WAIT(wait);
+		while(!(req->complete_flag)){
+			printk("[pstrace_enable] calling prepare_to_sleep");
+			prepare_to_wait(&pstrace_wait_q, &wait, TASK_INTERRUPTIBLE);
+			schedule();
+			printk("[pstrace_enable] woke up from sleep");
+		}
+		printk("[pstrace_enable] calling finish_wait");
+		finish_wait(&pstrace_wait_q, &wait);
+		printk("[pstrace_enable] finsihed waiting");
+
+		kfree(req);
+		kfree(kbuf);
+		kfree(kcounter);
+	}
 	return 0;
 }
 
