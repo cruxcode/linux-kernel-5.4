@@ -1,5 +1,8 @@
 #include <linux/types.h>
 #include <linux/list.h>
+#include <linux/kthread.h>
+#include<linux/sched.h>
+#include<linux/sched/task.h>
 
 struct pstrace {
 	char comm[16];
@@ -50,4 +53,43 @@ int save_request(struct request *req)
 	else
 		printk(KERN_ERR "[save_request] request not added to the list");
 	return -1;
+}
+
+int listener_fn(void *data)
+{
+	printk("[listener_fn] called");
+	int i = 0;
+	while(true){
+		if(i < 100)
+			printk(KERN_WARNING "[listener_fn] loop running");
+		if(signal_pending(current)){
+			printk("[listener_fn] signal is pending");
+			break;
+		}
+		++i;
+		schedule();
+	}
+	printk("[listener_fn] exiting");
+	return 0;
+}
+
+struct task_struct *listener(struct request *data){
+	struct task_struct *p;
+	printk("[listener] called");
+	char name[] = "pstrace_thread";
+	p = kthread_run(listener_fn, data, name);
+	if(!p){
+		printk("[listener] task_struct failed to create, null pointer");	
+	}
+	printk("[listener] exiting listener");
+	return p;
+}
+
+void thread_cleanup(struct task_struct *p)
+{
+	int failed;
+
+	failed = kthread_stop(p);
+	if(!failed)
+		printk("[thread_cleanup] thread stopped success");
 }

@@ -1,5 +1,3 @@
-#include<linux/sched.h>
-#include<linux/sched/task.h>
 #include<linux/syscalls.h>
 #include<linux/uaccess.h>
 #include<linux/pstrace.h>
@@ -90,13 +88,27 @@ SYSCALL_DEFINE3(pstrace_get,
 			kfree(kcounter);
 			return -ENOMEM;
 		}
+		
+		struct task_struct *handler;
+
+		handler = listener(req);
+
+		if(!handler){
+			printk("[pstrace_get] handler null before while starts");
+		}
 
 		DEFINE_WAIT(wait);
 		while(!(req->complete_flag)){
 			printk("[pstrace_enable] calling prepare_to_sleep");
 			prepare_to_wait(&pstrace_wait_q, &wait, TASK_INTERRUPTIBLE);
-			if(signal_pending(current))
+			if(signal_pending(current)){
+				printk("[pstrace_get] signal is pending");
+				if(!handler)
+					printk(KERN_WARNING "[pstrace_get] handler is null");
+				else
+					thread_cleanup(handler);
 				break;
+			}
 			schedule();
 			printk("[pstrace_enable] woke up from sleep");
 		}
