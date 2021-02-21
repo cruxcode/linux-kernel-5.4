@@ -62,10 +62,13 @@ int listener_fn(void *data)
 	while(true){
 		if(i < 100)
 			printk(KERN_WARNING "[listener_fn] loop running");
-		if(signal_pending(current)){
-			printk("[listener_fn] signal is pending");
+		if(kthread_should_stop()){
 			break;
 		}
+		//if(signal_pending(current)){
+		//	printk("[listener_fn] signal is pending");
+		//	break;
+		//}
 		++i;
 		schedule();
 	}
@@ -88,7 +91,9 @@ struct task_struct *listener(struct request *data){
 void thread_cleanup(struct task_struct *p)
 {
 	int failed;
-
+	printk("[thread_cleanup] called");
+	if(!p)
+		printk("[thread_cleanup] p is null");
 	failed = kthread_stop(p);
 	if(!failed)
 		printk("[thread_cleanup] thread stopped success");
