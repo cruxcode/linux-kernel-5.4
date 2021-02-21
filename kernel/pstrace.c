@@ -80,7 +80,7 @@ SYSCALL_DEFINE3(pstrace_get,
 		}
 
 		unsigned long flags;
-
+		create_request(req, pid, kcounter, kbuf);
 		spin_lock_irqsave(&request_list_lock, flags);
 		success = save_request(req);
 		spin_unlock_irqrestore(&request_list_lock, flags);
@@ -95,6 +95,8 @@ SYSCALL_DEFINE3(pstrace_get,
 		while(!(req->complete_flag)){
 			printk("[pstrace_enable] calling prepare_to_sleep");
 			prepare_to_wait(&pstrace_wait_q, &wait, TASK_INTERRUPTIBLE);
+			if(signal_pending(current))
+				break;
 			schedule();
 			printk("[pstrace_enable] woke up from sleep");
 		}
