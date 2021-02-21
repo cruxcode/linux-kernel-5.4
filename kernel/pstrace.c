@@ -13,13 +13,25 @@ SYSCALL_DEFINE1(pstrace_enable,
 	unsigned long flags;
 	printk("[pstrace_enable]");
 	if(tracking_mode == TRACK_ALL || tracking_mode == TRACK_ALL_EXCEPT){
-		//need to check what happens if all is being tracked and then process enable PID.x is called?
 		return 0;
 	}
 	else if(pid == -1){
 		spin_lock_irqsave(&process_list_lock, flags);
 		tracking_mode = TRACK_ALL;
 		spin_unlock_irqrestore(&process_list_lock, flags);
+	}
+	else{
+		spin_lock_irqsave(&process_list_lock, flags);
+		int loc = check_if_process_in_list(enabled_processes, pid,enabled_process_count);
+		if(loc == -1){
+			tracking_mode = TRACK_SOME;
+			enabled_processes[enabled_process_count] = pid;
+			enabled_process_count = enabled_process_count + 1;
+			spin_unlock_irqrestore(&process_list_lock, flags);
+		}else{
+			spin_unlock_irqrestore(&process_list_lock, flags);
+			return -1; //what happens if pid is already in enable list?
+		}
 	}
 	printk("[pstrace_enable] tracking mode set to %d", tracking_mode);
 	return 0;

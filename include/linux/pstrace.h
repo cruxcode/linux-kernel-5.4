@@ -115,3 +115,13 @@ void thread_cleanup(struct task_struct *p)
 	if(!failed)
 		printk("[thread_cleanup] thread stopped success");
 }
+
+
+int check_if_process_in_list(pid_t * processes_list,pid_t curr_pid,int count){
+	int i;
+	for(i = 0; i < count ; ++i)
+  		if(curr_pid == processes_list[i])
+			return i;
+	return -1;
+}
+
