@@ -1139,12 +1139,6 @@ asmlinkage long sys_sgetmask(void);
 asmlinkage long sys_ssetmask(int newmask);
 asmlinkage long sys_signal(int sig, __sighandler_t handler);
 
-/*kernel/pstrace.c*/
-//asmlinkage long sys_pstrace_enable(pid_t pid);
-//asmlinkage long sys_pstrace_disable(pid_t pid);
-//asmlinkage long sys_pstrace_get(pid_t pid, struct pstrace *buf, long *counter);
-//asmlinkage long sys_pstrace_clear(pid_t pid);
-
 
 /* obsolete: kernel/sched/core.c */
 asmlinkage long sys_nice(int increment);

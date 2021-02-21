@@ -10,9 +10,17 @@
 SYSCALL_DEFINE1(pstrace_enable,
 		pid_t, pid)
 {
+	unsigned long flags;
 	printk("[pstrace_enable]");
-	if(pid == -1)
+	if(tracking_mode == TRACK_ALL || tracking_mode == TRACK_ALL_EXCEPT){
+		//need to check what happens if all is being tracked and then process enable PID.x is called?
+		return 0;
+	}
+	else if(pid == -1){
+		spin_lock_irqsave(&process_list_lock, flags);
 		tracking_mode = TRACK_ALL;
+		spin_unlock_irqrestore(&process_list_lock, flags);
+	}
 	printk("[pstrace_enable] tracking mode set to %d", tracking_mode);
 	return 0;
 }

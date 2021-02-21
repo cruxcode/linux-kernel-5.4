@@ -29,6 +29,15 @@ struct request {
 
 #define TRACK_ALL 1
 #define TRACK_NONE 2
+#define TRACK_ALL_EXCEPT 3
+#define TRACK_SOME 4
+
+//Process lists and spinlocks for processes
+pid_t enabled_processes[PSTRACE_BUF_SIZE];
+pid_t disabled_processes[PSTRACE_BUF_SIZE];
+int enabled_process_count = 0;
+int disabled_process_count = 0;
+DEFINE_SPINLOCK(process_list_lock);
 
 struct pstrace_buf ring_buffer;
 DEFINE_SPINLOCK(ring_buf_lock);
