@@ -76,6 +76,7 @@ int listener_fn(void *data)
 		}
 		if (new_data->complete_flag){
 			wake_up(&pstrace_wait_q);
+			break;
 		}
 		schedule();
 	}

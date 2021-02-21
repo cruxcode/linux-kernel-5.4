@@ -1,6 +1,7 @@
 #include<linux/syscalls.h>
 #include<linux/uaccess.h>
 #include<linux/pstrace.h>
+#include <linux/string.h>
 #include <linux/slab.h>
 /*
  * Syscall No. 436
@@ -115,7 +116,20 @@ SYSCALL_DEFINE3(pstrace_get,
 		printk("[pstrace_enable] calling finish_wait");
 		finish_wait(&pstrace_wait_q, &wait);
 		printk("[pstrace_enable] finsihed waiting");
-
+		success = copy_to_user(buf, kbuf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
+		if (success != 0){
+			kfree(req);
+			kfree(kbuf);
+			kfree(kcounter);
+			return -EFAULT;
+		}
+		success = copy_to_user(counter, kcounter, sizeof(long));
+		if (success != 0){
+			kfree(req);
+			kfree(kbuf);
+			kfree(kcounter);
+			return -EFAULT;
+		} 
 		kfree(req);
 		kfree(kbuf);
 		kfree(kcounter);
@@ -143,15 +157,28 @@ void pstrace_add(struct task_struct *p){
 	unsigned long ring_buf_flags;
 	unsigned long request_list_flags;
 	if(p->state == TASK_STOPPED || p->state == TASK_INTERRUPTIBLE || p->state == TASK_UNINTERRUPTIBLE|| p->state == TASK_RUNNING){
-		printk("[pstrace_add]");
+		//printk("[pstrace_add]");
 		if (tracking_mode == TRACK_ALL){
 			local_irq_save(flags);
 			spin_lock_irqsave(&request_list_lock, request_list_flags);
-			spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);			
+			spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
+			memcpy(ring_buffer.buf[ring_buffer.head].comm, p->comm, sizeof(char)*16);
+			ring_buffer.buf[ring_buffer.head].pid = p->pid;
+			ring_buffer.buf[ring_buffer.head].state = p->state;
+			ring_buffer.head = (ring_buffer.head + 1) % PSTRACE_BUF_SIZE;
+			ring_buffer.counter += 1;
+			ring_buffer.current_size += 1;
+			if (ring_buffer.current_size > PSTRACE_BUF_SIZE){
+				ring_buffer.current_size = PSTRACE_BUF_SIZE;
+			}
 			struct request *pos, *next;			
-			list_for_each_entry_safe(pos, next, &request_list_head, list){			
-				pos->complete_flag = true;
-				list_del(&pos->list);
+			list_for_each_entry_safe(pos, next, &request_list_head, list){						
+				if (ring_buffer.counter == PSTRACE_BUF_SIZE + *(pos->counter)){		
+					memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
+					*(pos->counter) = ring_buffer.counter;
+					pos->complete_flag = true;
+					list_del(&pos->list);
+				}
 			}
 			spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
 			spin_unlock_irqrestore(&request_list_lock, request_list_flags);
