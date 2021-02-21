@@ -220,11 +220,13 @@ SYSCALL_DEFINE1(pstrace_clear,
 		pid_t , pid)
 {
 	unsigned long ring_buf_flags;
+	unsigned long request_list_flags;
+	struct request *pos, *next;
 	printk("[pstrace_clear]");
+	spin_lock_irqsave(&request_list_lock, request_list_flags);
+	spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
 	if(pid == -1){
 		
-		spin_lock_irqsave(&request_list_lock, request_list_flags);
-		spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
 		//for evert element in the request list empty			
 		list_for_each_entry_safe(pos, next, &request_list_head, list){	
 						
@@ -236,14 +238,9 @@ SYSCALL_DEFINE1(pstrace_clear,
 		}
 		ring_buffer.head = 0;
 		ring_buffer.current_size = 0;
-		
-		spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
-		spin_unlock_irqrestore(&request_list_lock, request_list_flags);
 	}else{
 		int i;
 		int current_iteration;
-		spin_lock_irqsave(&request_list_lock, request_list_flags);
-		spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
 		i = ring_buffer.head;
 		//dump all those get requests which match pid
 		list_for_each_entry_safe(pos, next, &request_list_head, list){	
@@ -256,14 +253,14 @@ SYSCALL_DEFINE1(pstrace_clear,
 			}
 		}
 		//remove the pid matching the clear from ring buffer
-		for (current_iteration = 0;current_iteration < current_size;current_iteration++){
-			if(ring_buffer.buf[ring_buffer.head].pid == pid)
+		for (current_iteration = 0;current_iteration < ring_buffer.current_size;current_iteration++){
+			if(ring_buffer.buf[i].pid == pid)
 				ring_buffer.buf[ring_buffer.head].pid = -1;
+			i = (i+1)%PSTRACE_BUF_SIZE;
 		}
-
-		spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
-		spin_unlock_irqrestore(&request_list_lock, request_list_flags);
 	}
+	spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
+	spin_unlock_irqrestore(&request_list_lock, request_list_flags);
 	return 0;
 }
 
@@ -283,13 +280,17 @@ void pstrace_add(struct task_struct *p){
 			(tracking_mode == TRACK_SOME && check_if_process_in_list(enabled_processes, p->pid,enabled_process_count)!=-1) 
 			){
 			struct request *pos, *next;
+			long state_to_be_stored;
 			spin_unlock_irqrestore(&process_list_lock, flags);
 			local_irq_save(flags);
 			spin_lock_irqsave(&request_list_lock, request_list_flags);
 			spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
 			memcpy(ring_buffer.buf[ring_buffer.head].comm, p->comm, sizeof(char)*16);
 			ring_buffer.buf[ring_buffer.head].pid = p->pid;
-			ring_buffer.buf[ring_buffer.head].state = p->state;
+			state_to_be_stored = p->state;
+			if(p->exit_state == EXIT_DEAD || p->exit_state == EXIT_ZOMBIE)
+				state_to_be_stored = p->exit_state;
+			ring_buffer.buf[ring_buffer.head].state = state_to_be_stored;
 			ring_buffer.head = (ring_buffer.head + 1) % PSTRACE_BUF_SIZE;
 			ring_buffer.counter += 1;
 			ring_buffer.current_size += 1;
