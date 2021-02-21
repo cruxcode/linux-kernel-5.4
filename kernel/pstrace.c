@@ -219,7 +219,51 @@ SYSCALL_DEFINE3(pstrace_get,
 SYSCALL_DEFINE1(pstrace_clear,
 		pid_t , pid)
 {
+	unsigned long ring_buf_flags;
 	printk("[pstrace_clear]");
+	if(pid == -1){
+		
+		spin_lock_irqsave(&request_list_lock, request_list_flags);
+		spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
+		//for evert element in the request list empty			
+		list_for_each_entry_safe(pos, next, &request_list_head, list){	
+						
+			memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);//replace with the function Shyam comes up here
+
+			*(pos->counter) = ring_buffer.counter;
+			pos->complete_flag = true;
+			list_del(&pos->list);
+		}
+		ring_buffer.head = 0;
+		ring_buffer.current_size = 0;
+		
+		spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
+		spin_unlock_irqrestore(&request_list_lock, request_list_flags);
+	}else{
+		int i;
+		int current_iteration;
+		spin_lock_irqsave(&request_list_lock, request_list_flags);
+		spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
+		i = ring_buffer.head;
+		//dump all those get requests which match pid
+		list_for_each_entry_safe(pos, next, &request_list_head, list){	
+										
+			if (pos->pid==pid){		
+				memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);//replace with the function Shyam comes up here
+				*(pos->counter) = ring_buffer.counter;
+				pos->complete_flag = true;
+				list_del(&pos->list);
+			}
+		}
+		//remove the pid matching the clear from ring buffer
+		for (current_iteration = 0;current_iteration < current_size;current_iteration++){
+			if(ring_buffer.buf[ring_buffer.head].pid == pid)
+				ring_buffer.buf[ring_buffer.head].pid = -1;
+		}
+
+		spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
+		spin_unlock_irqrestore(&request_list_lock, request_list_flags);
+	}
 	return 0;
 }
 
