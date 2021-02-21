@@ -4,10 +4,19 @@
 #include<linux/sched.h>
 #include<linux/sched/task.h>
 
+#define PSTRACE_BUF_SIZE 500
+
 struct pstrace {
 	char comm[16];
 	pid_t pid;
 	long state;
+};
+
+struct pstrace_buf{
+	struct pstrace buf[PSTRACE_BUF_SIZE];
+	long head;
+	long current_size;	
+	long counter;
 };
 
 struct request {
@@ -21,9 +30,10 @@ struct request {
 #define TRACK_ALL 1
 #define TRACK_NONE 2
 
-int tracking_mode;
+struct pstrace_buf ring_buffer;
+DEFINE_SPINLOCK(ring_buf_lock);
 
-#define PSTRACE_BUF_SIZE 500
+int tracking_mode;
 
 wait_queue_head_t pstrace_wait_q;
 DECLARE_WAIT_QUEUE_HEAD(pstrace_wait_q);
@@ -57,19 +67,16 @@ int save_request(struct request *req)
 
 int listener_fn(void *data)
 {
+	struct request *new_data;
+	new_data = (struct request *)data;
 	printk("[listener_fn] called");
-	int i = 0;
 	while(true){
-		if(i < 100)
-			printk(KERN_WARNING "[listener_fn] loop running");
 		if(kthread_should_stop()){
 			break;
 		}
-		//if(signal_pending(current)){
-		//	printk("[listener_fn] signal is pending");
-		//	break;
-		//}
-		++i;
+		if (new_data->complete_flag){
+			wake_up(&pstrace_wait_q);
+		}
 		schedule();
 	}
 	printk("[listener_fn] exiting");

@@ -139,5 +139,23 @@ SYSCALL_DEFINE1(pstrace_clear,
 
 /* Add a record of the state change into the ring buffer. */
 void pstrace_add(struct task_struct *p){
-	printk("[pstrace_add]");	
+	unsigned long flags;
+	unsigned long ring_buf_flags;
+	unsigned long request_list_flags;
+	if(p->state == TASK_STOPPED || p->state == TASK_INTERRUPTIBLE || p->state == TASK_UNINTERRUPTIBLE|| p->state == TASK_RUNNING){
+		printk("[pstrace_add]");
+		if (tracking_mode == TRACK_ALL){
+			local_irq_save(flags);
+			spin_lock_irqsave(&request_list_lock, request_list_flags);
+			spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);			
+			struct request *pos, *next;			
+			list_for_each_entry_safe(pos, next, &request_list_head, list){			
+				pos->complete_flag = true;
+				list_del(&pos->list);
+			}
+			spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
+			spin_unlock_irqrestore(&request_list_lock, request_list_flags);
+			local_irq_restore(flags);
+		}				
+	}
 }
