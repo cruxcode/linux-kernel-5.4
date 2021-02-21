@@ -66,7 +66,8 @@ SYSCALL_DEFINE1(pstrace_disable,
 			disabled_process_count = disabled_process_count + 1;
 		}
 	}else{
-		int loc = check_if_process_in_list(enabled_processes, pid,enabled_process_count);
+		int loc;
+		loc = check_if_process_in_list(enabled_processes, pid,enabled_process_count);
 		if(loc >= 0){
 			enabled_processes[loc] = -1;
 		}
@@ -95,13 +96,16 @@ SYSCALL_DEFINE3(pstrace_get,
 		struct pstrace __user * , buf,
 		long __user * , counter)
 {
-	printk("[pstrace_get]");
 	int success;
+	printk("[pstrace_get]");
 
 	if(tracking_mode == TRACK_ALL){
 		unsigned long flags;
 		long *kcounter;
 		struct pstrace *kbuf;
+		struct task_struct *handler;
+		struct request *req;
+		
 
 		kcounter = kmalloc(sizeof(long), GFP_KERNEL);
 		if(!kcounter)
@@ -118,8 +122,6 @@ SYSCALL_DEFINE3(pstrace_get,
 			return -ENOMEM;
 		}
 		
-		struct request *req;
-		
 		req = kmalloc(sizeof(struct request), GFP_KERNEL);
 
 		if(!req){
@@ -128,7 +130,7 @@ SYSCALL_DEFINE3(pstrace_get,
 			return -ENOMEM;
 		}
 
-		if(kcounter <= ring_buffer.counter){
+		if(*kcounter <= ring_buffer.counter){
 			//Call add to buffer here
 			success = copy_to_user(buf, kbuf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
 			if (success != 0){
@@ -160,7 +162,6 @@ SYSCALL_DEFINE3(pstrace_get,
 			return -ENOMEM;
 		}
 		
-		struct task_struct *handler;
 
 		handler = listener(req);
 
@@ -235,6 +236,7 @@ void pstrace_add(struct task_struct *p){
 			|| 
 			(tracking_mode == TRACK_SOME && check_if_process_in_list(enabled_processes, p->pid,enabled_process_count)!=-1) 
 			){
+			struct request *pos, *next;
 			spin_unlock_irqrestore(&process_list_lock, flags);
 
 			local_irq_save(flags);
@@ -248,8 +250,7 @@ void pstrace_add(struct task_struct *p){
 			ring_buffer.current_size += 1;
 			if (ring_buffer.current_size > PSTRACE_BUF_SIZE){
 				ring_buffer.current_size = PSTRACE_BUF_SIZE;
-			}
-			struct request *pos, *next;			
+			}			
 			list_for_each_entry_safe(pos, next, &request_list_head, list){						
 				if (ring_buffer.counter == PSTRACE_BUF_SIZE + *(pos->counter)){		
 					memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
