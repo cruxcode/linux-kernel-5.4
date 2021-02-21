@@ -131,7 +131,7 @@ SYSCALL_DEFINE3(pstrace_get,
 		}
 
 		printk("[pstrace_enable] coun ter value %ld buffer counter %ld",*kcounter, ring_buffer.counter );
-		if((*kcounter)+PSTRACE_BUF_SIZE <= ring_buffer.counter){
+		if((*kcounter)+PSTRACE_BUF_SIZE <= ring_buffer.counter || *kcounter <=0){
 			//Call add to buffer here
 			success = copy_to_user(buf, kbuf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
 			if (success != 0){
