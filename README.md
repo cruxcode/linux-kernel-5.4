@@ -10,7 +10,7 @@ This assignment was aimed at enabling tracking of 6 states, namely:
 5. EXIT\_ZOMBIE
 6. EXIT\_DEAD
 
-We have implemented this by using the concept of wait\_queue coupled with kthreads. We have also used spin locks for atomic operations on certain datastructures. The main kernel code is written in kernel/pstrace.c. The functions that are available for user code to call are:
+We have implemented this by using the concept of wait\_queue coupled with kthreads. We have also used spin locks for atomic operations on certain datastructures. The main kernel code is written in kernel/pstrace.c. The system calls that are available for user code to call are:
 
 1. pstrace\_get
 2. pstrace\_enable
