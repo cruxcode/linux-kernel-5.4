@@ -69,10 +69,10 @@ int save_request(struct request *req)
 	new_req = list_last_entry(&request_list_head, struct request, list);
 	if (new_req == req) {
 
-		//printk(KERN_INFO "[save_request] request added to linked list success");
+//printk(KERN_INFO "[save_request] request added to linked list success");
 		return 1;
 	} //else
-		//printk(KERN_ERR "[save_request] request not added to the list");
+//printk(KERN_ERR "[save_request] request not added to the list");
 	return -1;
 }
 
@@ -99,12 +99,12 @@ struct task_struct *listener(struct request *data)
 {
 	struct task_struct *p;
 	char name[] = "pstrace_thread";
-	printk("[listener] called");
+
+	//printk("[listener] called");
 	p = kthread_run(listener_fn, data, name);
-	if (!p) {
-		printk("[listener] task_struct failed to create, null pointer");
-	}
-	printk("[listener] exiting listener");
+	//if (!p)
+//printk("[listener] task_struct failed to create, null pointer");
+	//printk("[listener] exiting listener");
 	return p;
 }
 
