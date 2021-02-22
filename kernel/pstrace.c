@@ -143,51 +143,51 @@ SYSCALL_DEFINE3(pstrace_get,
 			spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
 			req->complete_flag = true;
 			success = copy_to_user(buf, kbuf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
-			if (success != 0){
+			if (success != 0) {
 				kfree(req);
 				kfree(kbuf);
 				kfree(kcounter);
 				return -EFAULT;
 			}
 			success = copy_to_user(counter, kcounter, sizeof(long));
-			if (success != 0){
+			if (success != 0) {
 				kfree(req);
 				kfree(kbuf);
 				kfree(kcounter);
 				return -EFAULT;
-			} 
+			}
 			kfree(req);
 			kfree(kbuf);
 			kfree(kcounter);
 			return 0;
 		}
 		spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
-		
+
 		spin_lock_irqsave(&request_list_lock, flags);
 		success = save_request(req);
 		spin_unlock_irqrestore(&request_list_lock, flags);
-		if(success < 0){
+		if (success < 0) {
 			kfree(req);
 			kfree(kbuf);
 			kfree(kcounter);
 			return -ENOMEM;
 		}
-		
 
 		handler = listener(req);
 
-		if(!handler){
+		if (!handler) {
 			printk("[pstrace_get] handler null before while starts");
 		}
 
 		DEFINE_WAIT(wait);
 
-		while(!(req->complete_flag)){
+		while (!(req->complete_flag)) {
 			printk("[pstrace_enable] calling prepare_to_sleep");
-			prepare_to_wait(&pstrace_wait_q, &wait, TASK_INTERRUPTIBLE);
-			if(signal_pending(current)){
+			prepare_to_wait(&pstrace_wait_q, &wait,
+				TASK_INTERRUPTIBLE);
+			if (signal_pending(current)) {
 				printk("[pstrace_get] signal is pending");
-				if(!handler)
+				if (!handler)
 					printk(KERN_WARNING "[pstrace_get] handler is null");
 				else
 					thread_cleanup(handler);
@@ -199,20 +199,21 @@ SYSCALL_DEFINE3(pstrace_get,
 		printk("[pstrace_enable] calling finish_wait");
 		finish_wait(&pstrace_wait_q, &wait);
 		printk("[pstrace_enable] finsihed waiting");
-		success = copy_to_user(buf, kbuf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
-		if (success != 0){
+		success = copy_to_user(buf, kbuf,
+		sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
+		if (success != 0) {
 			kfree(req);
 			kfree(kbuf);
 			kfree(kcounter);
 			return -EFAULT;
 		}
 		success = copy_to_user(counter, kcounter, sizeof(long));
-		if (success != 0){
+		if (success != 0) {
 			kfree(req);
 			kfree(kbuf);
 			kfree(kcounter);
 			return -EFAULT;
-		} 
+		}
 		kfree(req);
 		kfree(kbuf);
 		kfree(kcounter);
@@ -228,45 +229,42 @@ SYSCALL_DEFINE3(pstrace_get,
  * never be returned to pstrace_get.
  */
 SYSCALL_DEFINE1(pstrace_clear,
-		pid_t , pid)
+		pid_t, pid)
 {
 	unsigned long ring_buf_flags;
 	unsigned long request_list_flags;
 	struct request *pos, *next;
-	printk("[pstrace_clear]");
+
+	printk(KERN_INFO"[pstrace_clear]");
 	spin_lock_irqsave(&request_list_lock, request_list_flags);
 	spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
-	if(pid == -1){
-		
-		//for evert element in the request list empty			
-		list_for_each_entry_safe(pos, next, &request_list_head, list){	
-			
-			copy_from_buf_to_req(&ring_buffer, pos);			
-			//memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);//replace with the function Shyam comes up here
-			//*(pos->counter) = ring_buffer.counter;
+	if (pid == -1) {
+		//for evert element in the request list empty
+		list_for_each_entry_safe(pos, next, &request_list_head, list) {
+			copy_from_buf_to_req(&ring_buffer, pos);
 			pos->complete_flag = true;
 			list_del(&pos->list);
 		}
 		ring_buffer.head = 0;
 		ring_buffer.current_size = 0;
-	}else{
+	} else {
 		int i;
 		int current_iteration;
+
 		i = ring_buffer.head;
 		//dump all those get requests which match pid
-		list_for_each_entry_safe(pos, next, &request_list_head, list){	
-										
-			if (pos->pid==pid){
-				copy_from_buf_to_req(&ring_buffer, pos);		
-				//memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);//replace with the function Shyam comes up here
-				//*(pos->counter) = ring_buffer.counter;
+		list_for_each_entry_safe(pos, next, &request_list_head, list) {							
+			if (pos->pid == pid) {
+				copy_from_buf_to_req(&ring_buffer, pos);
 				pos->complete_flag = true;
 				list_del(&pos->list);
 			}
 		}
 		//remove the pid matching the clear from ring buffer
-		for (current_iteration = 0;current_iteration < ring_buffer.current_size;current_iteration++){
-			if(ring_buffer.buf[i].pid == pid)
+		for (current_iteration = 0;
+		current_iteration < ring_buffer.current_size;
+		current_iteration++) {
+			if (ring_buffer.buf[i].pid == pid)
 				ring_buffer.buf[ring_buffer.head].pid = -1;
 			i = (i+1)%PSTRACE_BUF_SIZE;
 		}
@@ -277,7 +275,8 @@ SYSCALL_DEFINE1(pstrace_clear,
 }
 
 /* Add a record of the state change into the ring buffer. */
-void pstrace_add(struct task_struct *p){
+void pstrace_add(struct task_struct *p)
+{
 	unsigned long flags;
 	unsigned long ring_buf_flags;
 	unsigned long request_list_flags;
