@@ -188,7 +188,10 @@ SYSCALL_DEFINE3(pstrace_get,
 				TASK_INTERRUPTIBLE);
 			if (signal_pending(current)) {
 				//printk("[pstrace_get] signal is pending");
-				if (handler)//printk(KERN_WARNING "[pstrace_get] handler is null");
+				//if (!handler)
+					//printk(KERN_WARNING "[pstrace_get] handler is null");
+				//else
+				if (handler)
 					thread_cleanup(handler);
 				break;
 			}
