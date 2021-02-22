@@ -34,13 +34,7 @@ int main(){
 	else if (pid == 0){
 		int i = 0;
 		sleep(1);
-		//fp = fopen("/dev/tty0","r");
-		//fread(buffer, sizeof(char), 15, fp);
 		while (i < 1000){
-			//fp = fopen("/dev/tty0","r");
-			//printf("starting\n");
-			//fread(buffer, sizeof(char), 15, fp);
-			//fclose(fp);
 			sleep(0.01);
 			i++;
 		}

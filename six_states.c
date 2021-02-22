@@ -6,6 +6,7 @@
 #include <signal.h>
 #include <string.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 
 struct pstrace {
 	char comm[16];
@@ -17,6 +18,9 @@ int main(int argc, char **argv)
 {
 	int pstrace_buf_size = 500;
 	int num_processes = 2;
+
+	FILE *fp;
+	char buffer[100];
 
 	struct pstrace *buf = malloc(pstrace_buf_size*num_processes*sizeof(struct pstrace));
 	long *counter = malloc(sizeof(long));
@@ -30,19 +34,36 @@ int main(int argc, char **argv)
 			return 1;
 		}
 		else if (pid == 0) {
-			while(1){
-				sleep(0.01);
+			int j = 0;
+			if ((i % 2) == 0){
+				sleep(10);
 			}
-			exit(0);
+			while(j < 1000){
+				sleep(0.01);
+				j++;
+			}
+			fp = fopen("/dev/tty0","r");
+			fread(buffer, sizeof(char), 15, fp);
+			fclose(fp);
+			if ((i % 2) == 0){
+				exit(0);
+			}
+			//exit(0);
 		}
 		else{
+			int wait_pid;
 			printf("THE PID I AM ENABLING %d\n", pid);
 			sys_res = syscall(436, pid);
 			printf("sys_res after enable %d\n", sys_res);
+			if ((i%2) == 0){
+				wait(NULL);
+				printf("IGNORING");
+				signal(SIGCHLD, SIG_IGN);
+			}	
+			sleep(5);
 			if (sys_res < 0){
 				printf("SOME ERROR IN ENABLE\n");
 			}
-			sleep(5);
 			kill(pid, SIGTSTP);
 			sleep(.1);
 			kill(pid, SIGINT);
