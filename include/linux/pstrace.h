@@ -137,3 +137,44 @@ int reset_enabled_and_disabled(void){
 	return 0;
 }
 
+
+void copy_from_buf_to_req(struct pstrace_buf *buf, struct request *req)
+{
+	printk("[copy_from_buf_to_req] called");
+	if(buf->current_size < PSTRACE_BUF_SIZE){
+		long j = 0, i;
+		for(i = 0; i < PSTRACE_BUF_SIZE; i++){
+			struct pstrace *curr = buf->buf + i;
+			if(i < 2){
+				printk("[copy_from_buf_to_req] 1 %d", curr->pid);
+			}
+			if(curr->pid != -1){
+				*(req->buf + j) = *curr;
+				j++;
+			}
+		}
+	} else {
+		long j = 0, i;
+		for(i = buf->head; i < PSTRACE_BUF_SIZE; i++){
+			struct pstrace *curr = buf->buf + i;
+			if(i < 2 + buf->head){
+				printk("[copy_from_buf_to_req] 2 %d", curr->pid);
+			}
+			if(curr->pid != -1){
+				*(req->buf + j) = *curr;
+				j++;
+			}
+		}
+		for(i = 0; i < buf->head; i++){
+			struct pstrace *curr = buf->buf + i;
+			if(i < 2){
+				printk("[copy_from_buf_to_req] 3 %d", curr->pid);
+			}
+			if(curr->pid != -1){
+				*(req->buf + j) = *curr;
+				j++;
+			}
+		}
+	}
+	*(req->counter) = buf->counter;
+}
