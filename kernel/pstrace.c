@@ -130,9 +130,13 @@ SYSCALL_DEFINE3(pstrace_get,
 			return -ENOMEM;
 		}
 
+		create_request(req, pid, kcounter, kbuf);
+
 		printk("[pstrace_enable] coun ter value %ld buffer counter %ld",*kcounter, ring_buffer.counter );
 		if((*kcounter)+PSTRACE_BUF_SIZE <= ring_buffer.counter || *kcounter <=0){
 			//Call add to buffer here
+			copy_from_buf_to_req(&ring_buffer, req);
+			req->complete_flag = true;
 			success = copy_to_user(buf, kbuf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
 			if (success != 0){
 				kfree(req);
@@ -152,7 +156,7 @@ SYSCALL_DEFINE3(pstrace_get,
 			kfree(kcounter);
 			return 0;
 		}
-		create_request(req, pid, kcounter, kbuf);
+		
 		spin_lock_irqsave(&request_list_lock, flags);
 		success = save_request(req);
 		spin_unlock_irqrestore(&request_list_lock, flags);
@@ -229,10 +233,10 @@ SYSCALL_DEFINE1(pstrace_clear,
 		
 		//for evert element in the request list empty			
 		list_for_each_entry_safe(pos, next, &request_list_head, list){	
-						
-			memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);//replace with the function Shyam comes up here
-
-			*(pos->counter) = ring_buffer.counter;
+			
+			copy_from_buf_to_req(&ring_buffer, pos);			
+			//memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);//replace with the function Shyam comes up here
+			//*(pos->counter) = ring_buffer.counter;
 			pos->complete_flag = true;
 			list_del(&pos->list);
 		}
@@ -245,9 +249,10 @@ SYSCALL_DEFINE1(pstrace_clear,
 		//dump all those get requests which match pid
 		list_for_each_entry_safe(pos, next, &request_list_head, list){	
 										
-			if (pos->pid==pid){		
-				memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);//replace with the function Shyam comes up here
-				*(pos->counter) = ring_buffer.counter;
+			if (pos->pid==pid){
+				copy_from_buf_to_req(&ring_buffer, pos);		
+				//memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);//replace with the function Shyam comes up here
+				//*(pos->counter) = ring_buffer.counter;
 				pos->complete_flag = true;
 				list_del(&pos->list);
 			}
