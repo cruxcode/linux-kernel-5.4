@@ -69,29 +69,29 @@ int save_request(struct request *req)
 	new_req = list_last_entry(&request_list_head, struct request, list);
 	if (new_req == req) {
 
-		printk(KERN_INFO "[save_request] request added to linked list success");
+		//printk(KERN_INFO "[save_request] request added to linked list success");
 		return 1;
-	} else
-		printk(KERN_ERR "[save_request] request not added to the list");
+	} //else
+		//printk(KERN_ERR "[save_request] request not added to the list");
 	return -1;
 }
 
 int listener_fn(void *data)
 {
 	struct request *new_data;
+
 	new_data = (struct request *)data;
-	printk("[listener_fn] called");
+	//printk("[listener_fn] called");
 	while (true) {
-		if (kthread_should_stop()) {
+		if (kthread_should_stop())
 			break;
-		}
 		if (new_data->complete_flag) {
 			wake_up(&pstrace_wait_q);
 			break;
 		}
 		schedule();
 	}
-	printk("[listener_fn] exiting");
+	//printk("[listener_fn] exiting");
 	return 0;
 }
 
@@ -111,12 +111,12 @@ struct task_struct *listener(struct request *data)
 void thread_cleanup(struct task_struct *p)
 {
 	int failed;
-	printk("[thread_cleanup] called");
-	if (!p)
-		printk("[thread_cleanup] p is null");
+	//printk("[thread_cleanup] called");
+	//if (!p)
+		//printk("[thread_cleanup] p is null");
 	failed = kthread_stop(p);
-	if (!failed)
-		printk("[thread_cleanup] thread stopped success");
+	//if (!failed)
+		//printk("[thread_cleanup] thread stopped success");
 }
 
 
