@@ -12,9 +12,13 @@ endif
 
 #make file - this is a comment section
 TARGET=test #target file name
+TARGET2=six_states #target file name
+TARGET3=test_with_arg #target file name
 
 all:
 	$(CC) -Wall test.c -g -o $(TARGET)
+	$(CC) -Wall six_states.c -g -o $(TARGET2)
+	$(CC) -Wall test_with_arg.c -g -o $(TARGET3)
 
 clean:
 	rm $(TARGET)

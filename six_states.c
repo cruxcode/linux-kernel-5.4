@@ -44,8 +44,11 @@ int main(int argc, char **argv)
 			}
 			sleep(5);
 			kill(pid, SIGTSTP);
-			kill(pid, SIGCONT);
+			sleep(.1);
+			kill(pid, SIGINT);
+			sleep(.1);
 			kill(pid, SIGKILL);
+			sleep(.1);
 			sys_res = syscall(438, pid, buf + pstrace_buf_size*i , counter);
 			if (sys_res < 0){
 				printf("SOME ERROR IN GET\n");
