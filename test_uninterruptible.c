@@ -43,7 +43,6 @@ int main(){
 			//fclose(fp);
 			sleep(0.01);
 			i++;
-			printf("completing\n");
 		}
 		fp = fopen("/dev/tty0","r");
 		fread(buffer, sizeof(char), 15, fp);
