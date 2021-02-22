@@ -35,41 +35,38 @@ int main(int argc, char **argv)
 		}
 		else if (pid == 0) {
 			int j = 0;
-			if ((i % 2) == 0){
-				sleep(10);
-			}
-			while(j < 1000){
+			signal(SIGTSTP, SIG_DFL);
+			while(j < 500*(i + 1)){
 				sleep(0.01);
 				j++;
 			}
-			fp = fopen("/dev/tty0","r");
-			fread(buffer, sizeof(char), 15, fp);
-			fclose(fp);
 			if ((i % 2) == 0){
+				raise(SIGTSTP);
+				fp = fopen("/dev/tty0","w");
+				fprintf(fp, "Hello from curxcode");
+				fclose(fp);
 				exit(0);
 			}
-			//exit(0);
 		}
 		else{
-			int wait_pid;
 			printf("THE PID I AM ENABLING %d\n", pid);
 			sys_res = syscall(436, pid);
-			printf("sys_res after enable %d\n", sys_res);
-			if ((i%2) == 0){
-				wait(NULL);
-				printf("IGNORING");
-				signal(SIGCHLD, SIG_IGN);
-			}	
+			printf("sys_res after enable %d\n", sys_res);	
 			sleep(5);
 			if (sys_res < 0){
 				printf("SOME ERROR IN ENABLE\n");
 			}
+			kill(pid, SIGCONT);
+			sleep(1);
 			kill(pid, SIGTSTP);
-			sleep(.1);
+			sleep(1);
 			kill(pid, SIGINT);
-			sleep(.1);
+			sleep(0.1);
 			kill(pid, SIGKILL);
-			sleep(.1);
+			sleep(0.1);
+			if(i%2 == 0)
+				wait(&sys_res);
+			signal(SIGCHLD, SIG_IGN);
 			sys_res = syscall(438, pid, buf + pstrace_buf_size*i , counter);
 			if (sys_res < 0){
 				printf("SOME ERROR IN GET\n");
@@ -81,9 +78,11 @@ int main(int argc, char **argv)
 			}
 		}	
 	}
+	fp = fopen("pstrace.output", "w");
 	for (int j = 0; j < pstrace_buf_size * num_processes ; j++){
-		struct pstrace *res = buf + j;
-		printf("pid %u state %lu comm %s\n", res->pid, res->state, res->comm);
+		struct pstrace *res = buf + j;	
+		fprintf(fp, "pid %u state %lu comm %s\n", res->pid, res->state, res->comm);
 	}
+	fclose(fp);
 	return 0;
 }
