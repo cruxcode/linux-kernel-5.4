@@ -30,6 +30,8 @@ int main(int argc, char **argv)
 	for (int i = 0; i < num_processes; i++){	
 		pid = fork();
 		if (pid < 0){
+			free(buf);
+			free(counter);
 			printf("Fork Failed\n");
 			return 1;
 		}
@@ -51,8 +53,11 @@ int main(int argc, char **argv)
 		else{
 			enabled[i] = pid;	
 			sys_res = syscall(436, pid);
-			if(sys_res != 0)
+			if(sys_res != 0){
+				free(buf);
+				free(counter);
 				exit(-1);
+			}
 			sleep(5);
 			kill(pid, SIGCONT);
 			sleep(1);
@@ -66,16 +71,20 @@ int main(int argc, char **argv)
 			signal(SIGCHLD, SIG_IGN);
 			sys_res = syscall(438, pid, buf + pstrace_buf_size*i , counter);
 			if (sys_res < 0){
+				free(counter);
+				free(buf);
 				exit(-1);
 			}	
 			sys_res = syscall(437, pid);
 			if (sys_res < 0){
+				free(counter);
+				free(buf);
 				exit(-1);
 			}
 		}	
 	}
 	
-	outfp = fopen("pstrace.output", "w");	
+	outfp = fopen("pstrace_output.txt", "w");	
 	for (int j = 0; j < pstrace_buf_size * num_processes ; j++){
 		if(j % pstrace_buf_size == 0)
 			fprintf(outfp, "pid enabled is %d\n", enabled[j%pstrace_buf_size]);
@@ -83,5 +92,7 @@ int main(int argc, char **argv)
 		fprintf(outfp, "pid %u state %lu comm %s\n", res->pid, res->state, res->comm);
 	}
 	fclose(outfp);
+	free(counter);
+	free(buf);
 	return 0;
 }

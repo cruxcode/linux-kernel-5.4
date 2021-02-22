@@ -11,16 +11,12 @@ endif
 # ---------- Write the rest of Makefile below ----------
 
 #make file - this is a comment section
-TARGET=test #target file name
 TARGET2=six_states #target file name
 TARGET3=test_with_arg #target file name
-TARGET4 = test_uninterruptible #target file name
 TARGET5 = test_chronology #target file name
 all:
-	$(CC) -Wall test.c -g -o $(TARGET)
 	$(CC) -Wall six_states.c -g -o $(TARGET2)
 	$(CC) -Wall test_with_arg.c -g -o $(TARGET3)
-	$(CC) -Wall test_uninterruptible.c -g -o $(TARGET4)
 	$(CC) -Wall test_chronology.c -g -o $(TARGET5)
 
 clean:
