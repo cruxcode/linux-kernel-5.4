@@ -130,10 +130,10 @@ int check_if_process_in_list(pid_t * processes_list,pid_t curr_pid,int count){
 
 int reset_enabled_and_disabled(void){
 	int i,j;
-	for(i = 0; i < enabled_process_count; i++)
-  		enabled_processes[i] = -1;
-	for(j = 0; j < disabled_process_count ; j++)
-  		disabled_processes[j] = -1;
+	for (i = 0; i < enabled_process_count; i++)
+		enabled_processes[i] = -1;
+	for (j = 0; j < disabled_process_count ; j++)
+		disabled_processes[j] = -1;
 	enabled_process_count = 0;
 	disabled_process_count = 0;
 	return 0;
@@ -143,22 +143,26 @@ int reset_enabled_and_disabled(void){
 void copy_from_buf_to_req(struct pstrace_buf *buf, struct request *req)
 {
 	printk("[copy_from_buf_to_req] called");
-	if(buf->current_size < PSTRACE_BUF_SIZE){
+	if (buf->current_size < PSTRACE_BUF_SIZE) {
 		long j = 0, i;
+
 		for (i = 0; i < buf->current_size; i++) {
 			struct pstrace *curr = buf->buf + i;
+
 			if (curr->pid != -1
-			&& (req->pid ==-1 || req->pid==curr->pid)) {
+			&& (req->pid == -1 || req->pid == curr->pid)) {
 				*(req->buf + j) = *curr;
 				j++;
 			}
 		}
 	} else {
 		long j = 0, i;
+
 		for (i = buf->head; i < PSTRACE_BUF_SIZE; i++) {
 			struct pstrace *curr = buf->buf + i;
+
 			if (curr->pid != -1
-			&& (req->pid ==-1 || req->pid==curr->pid)) {
+			&& (req->pid == -1 || req->pid == curr->pid)) {
 				*(req->buf + j) = *curr;
 				j++;
 			}
@@ -166,7 +170,7 @@ void copy_from_buf_to_req(struct pstrace_buf *buf, struct request *req)
 		for (i = 0; i < buf->head; i++) {
 			struct pstrace *curr = buf->buf + i;
 			if (curr->pid != -1
-			&& (req->pid ==-1 || req->pid==curr->pid)) {
+			&& (req->pid == -1 || req->pid == curr->pid)) {
 				*(req->buf + j) = *curr;
 				j++;
 			}

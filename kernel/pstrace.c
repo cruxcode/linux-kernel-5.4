@@ -18,7 +18,7 @@ SYSCALL_DEFINE1(pstrace_enable,
 	if (tracking_mode == TRACK_ALL || tracking_mode == TRACK_ALL_EXCEPT) {
 		spin_unlock_irqrestore(&process_list_lock, flags);
 		return 0;
-	} else if(pid == -1) {
+	} else if (pid == -1) {
 		tracking_mode = TRACK_ALL;
 		reset_enabled_and_disabled();
 	} else {
