@@ -30,10 +30,8 @@ int main(int argc, char **argv)
 			return 1;
 		}
 		else if (pid == 0) {
-			int j = 0;
-			while(j < 250){
+			while(1){
 				sleep(0.01);
-				j++;
 			}
 			exit(0);
 		}
@@ -44,7 +42,10 @@ int main(int argc, char **argv)
 			if (sys_res < 0){
 				printf("SOME ERROR IN ENABLE\n");
 			}
-			sleep(2);
+			sleep(5);
+			kill(pid, SIGTSTP);
+			kill(pid, SIGCONT);
+			kill(pid, SIGKILL);
 			sys_res = syscall(438, pid, buf + pstrace_buf_size*i , counter);
 			if (sys_res < 0){
 				printf("SOME ERROR IN GET\n");
