@@ -12,10 +12,10 @@ struct pstrace {
 	long state;
 };
 
-struct pstrace_buf{
+struct pstrace_buf {
 	struct pstrace buf[PSTRACE_BUF_SIZE];
 	long head;
-	long current_size;	
+	long current_size;
 	long counter;
 };
 
@@ -35,8 +35,8 @@ struct request {
 //Process lists and spinlocks for processes
 pid_t enabled_processes[PSTRACE_BUF_SIZE];
 pid_t disabled_processes[PSTRACE_BUF_SIZE];
-int enabled_process_count = 0;
-int disabled_process_count = 0;
+int enabled_process_count;
+int disabled_process_count;
 DEFINE_SPINLOCK(process_list_lock);
 
 struct pstrace_buf ring_buffer;
@@ -50,7 +50,9 @@ DECLARE_WAIT_QUEUE_HEAD(pstrace_wait_q);
 LIST_HEAD(request_list_head);
 DEFINE_SPINLOCK(request_list_lock);
 
-void create_request(struct request * req, pid_t pid, long *counter, struct pstrace *buf)
+void create_request(struct request *req, pid_t pid, 
+long *counter, 
+struct pstrace *buf)
 {
 	req->pid = pid;
 	req->counter = counter;
@@ -61,15 +63,15 @@ void create_request(struct request * req, pid_t pid, long *counter, struct pstra
 int save_request(struct request *req)
 {
 	struct request *new_req;
+
 	list_add_tail(&req->list, &request_list_head);
 
 	new_req = list_last_entry(&request_list_head, struct request, list);
-	if(new_req == req){
+	if (new_req == req) {
 
 		printk(KERN_INFO "[save_request] request added to linked list success");
 		return 1;
-	}
-	else
+	} else
 		printk(KERN_ERR "[save_request] request not added to the list");
 	return -1;
 }

@@ -320,9 +320,8 @@ void pstrace_add(struct task_struct *p){
 			spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
 			spin_unlock_irqrestore(&request_list_lock, request_list_flags);
 			local_irq_restore(flags);
-		}else{
+		} else{
 			spin_unlock_irqrestore(&process_list_lock, flags);
 		}
-				
 	}
 }
