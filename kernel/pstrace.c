@@ -11,7 +11,8 @@ SYSCALL_DEFINE1(pstrace_enable,
 		pid_t, pid)
 {
 	unsigned long flags;
-	printk("[pstrace_enable]");
+
+	//printk("[pstrace_enable]");
 	spin_lock_irqsave(&process_list_lock, flags);
 	if (pid != -1 && !is_valid_pid(pid))
 		return -EINVAL;
@@ -35,7 +36,7 @@ SYSCALL_DEFINE1(pstrace_enable,
 		}
 	}
 	spin_unlock_irqrestore(&process_list_lock, flags);
-	printk("[pstrace_enable] tracking mode set to %d", tracking_mode);
+	//printk("[pstrace_enable] tracking mode set to %d", tracking_mode);
 	return 0;
 }
 
@@ -48,7 +49,7 @@ SYSCALL_DEFINE1(pstrace_disable,
 {
 	unsigned long flags;
 
-	printk("[pstrace_disable]");
+	//printk("[pstrace_disable]");
 	spin_lock_irqsave(&process_list_lock, flags);
 	if (tracking_mode == TRACK_NONE) {
 		spin_unlock_irqrestore(&process_list_lock, flags);
@@ -58,10 +59,13 @@ SYSCALL_DEFINE1(pstrace_disable,
 		reset_enabled_and_disabled();
 	} else if (tracking_mode == TRACK_ALL
 		|| tracking_mode == TRACK_ALL_EXCEPT) {
+
 		if (check_if_process_in_list(disabled_processes,
-			pid, disabled_process_count) != -1){
+			pid, disabled_process_count) != -1) {
+
 			spin_unlock_irqrestore(&process_list_lock, flags);
 			return 0;
+
 		} else {
 			tracking_mode = TRACK_ALL_EXCEPT;
 			disabled_processes[disabled_process_count] = pid;
@@ -178,7 +182,7 @@ SYSCALL_DEFINE3(pstrace_get,
 		handler = listener(req);
 
 		//if (!handler)
-			//printk("[pstrace_get] handler null before while starts");
+	//printk("[pstrace_get] handler null before while starts");
 
 		DEFINE_WAIT(wait);
 
@@ -189,7 +193,7 @@ SYSCALL_DEFINE3(pstrace_get,
 			if (signal_pending(current)) {
 				//printk("[pstrace_get] signal is pending");
 				//if (!handler)
-					//printk(KERN_WARNING "[pstrace_get] handler is null");
+		//printk(KERN_WARNING "[pstrace_get] handler is null");
 				//else
 				if (handler)
 					thread_cleanup(handler);

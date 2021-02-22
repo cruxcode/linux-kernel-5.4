@@ -198,9 +198,9 @@ int is_valid_pid(pid_t pid)
 	struct task_struct *root_task;
 
 	root_task = get_root(pid);
-	if (!root_task) {
+	if (!root_task)
 		return 0;
-	}
+
 	return 1;
 }
 
