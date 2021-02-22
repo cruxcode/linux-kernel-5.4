@@ -10,12 +10,14 @@ This assignment was aimed at enabling tracking of 6 states, namely:
 5. EXIT\_ZOMBIE
 6. EXIT\_DEAD
 
-We have implemented this by using the concept of wait\_queue coupled with kthreads. We have also used spin locks for atomic operations on certain datastructures. The main kernel code is written in kernel/pstrace.c. The system calls that are available for user code to call are:
+We have implemented this by using the concept of wait\_queue coupled with kthreads. We have also used spin locks for operations on certain datastructures from within critical section only. The main kernel code is written in kernel/pstrace.c. The system calls that are available for user code to call are:
 
 1. pstrace\_get
 2. pstrace\_enable
 3. pstrace\_disable
 4. pstrace\_clear
+
+Each time a user makes a pstrace_get system call, the pstrace_get in kernel creates a new kthread whose job is to keep checking if the condition has been satisfied for the pstrace_get call to finish. In pstrace_add, we add the event into the ring buffer and check if any user request has met the required condition. If yes, we copy all the data in a request datastrcutre (it holds the details of client's request like pid, counter, buffer etc.). This way we ensure that user gets the instantaneuos snapshot of the ring buffer as soon as it's condition has been satisfied. Note, we **do not** call wake_up inside pstrace_add, hence, **no deadlock occurs**.
 
 Finally, in the "test" branch, are two files that can be used to test two very specific functionalities of the system calls. 
 
