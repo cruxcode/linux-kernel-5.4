@@ -14,11 +14,13 @@ endif
 TARGET=test #target file name
 TARGET2=six_states #target file name
 TARGET3=test_with_arg #target file name
+TARGET4 = test_uninterruptible #target file name
 
 all:
 	$(CC) -Wall test.c -g -o $(TARGET)
 	$(CC) -Wall six_states.c -g -o $(TARGET2)
 	$(CC) -Wall test_with_arg.c -g -o $(TARGET3)
+	$(CC) -Wall test_uninterruptible.c -g -o $(TARGET4)
 
 clean:
 	rm $(TARGET)
