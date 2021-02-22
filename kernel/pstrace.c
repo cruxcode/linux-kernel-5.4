@@ -80,7 +80,7 @@ SYSCALL_DEFINE1(pstrace_disable,
 		}
 	}
 	spin_unlock_irqrestore(&process_list_lock, flags);
-	printk("[pstrace_disable] tracking mode set to %d", tracking_mode);
+	//printk("[pstrace_disable] tracking mode set to %d", tracking_mode);
 	return 0;
 }
 /*
@@ -177,29 +177,27 @@ SYSCALL_DEFINE3(pstrace_get,
 
 		handler = listener(req);
 
-		if (!handler)
-			printk("[pstrace_get] handler null before while starts");
+		//if (!handler)
+			//printk("[pstrace_get] handler null before while starts");
 
 		DEFINE_WAIT(wait);
 
 		while (!(req->complete_flag)) {
-			printk("[pstrace_enable] calling prepare_to_sleep");
+			//printk("[pstrace_enable] calling prepare_to_sleep");
 			prepare_to_wait(&pstrace_wait_q, &wait,
 				TASK_INTERRUPTIBLE);
 			if (signal_pending(current)) {
-				printk("[pstrace_get] signal is pending");
-				if (!handler)
-					printk(KERN_WARNING "[pstrace_get] handler is null");
-				else
+				//printk("[pstrace_get] signal is pending");
+				if (handler)//printk(KERN_WARNING "[pstrace_get] handler is null");
 					thread_cleanup(handler);
 				break;
 			}
 			schedule();
-			printk("[pstrace_enable] woke up from sleep");
+			//printk("[pstrace_enable] woke up from sleep");
 		}
-		printk("[pstrace_enable] calling finish_wait");
+		//printk("[pstrace_enable] calling finish_wait");
 		finish_wait(&pstrace_wait_q, &wait);
-		printk("[pstrace_enable] finsihed waiting");
+		//printk("[pstrace_enable] finsihed waiting");
 		success = copy_to_user(buf, kbuf,
 		sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
 		if (success != 0) {
@@ -236,7 +234,7 @@ SYSCALL_DEFINE1(pstrace_clear,
 	unsigned long request_list_flags;
 	struct request *pos, *next;
 
-	printk(KERN_INFO"[pstrace_clear]");
+	//printk(KERN_INFO"[pstrace_clear]");
 	spin_lock_irqsave(&request_list_lock, request_list_flags);
 	spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
 	if (pid == -1) {
