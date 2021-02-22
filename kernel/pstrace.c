@@ -310,9 +310,9 @@ void pstrace_add(struct task_struct *p){
 				ring_buffer.current_size = PSTRACE_BUF_SIZE;
 			}			
 			list_for_each_entry_safe(pos, next,
-				&request_list_head, list) {						
-				if (ring_buffer.counter == 
-					PSTRACE_BUF_SIZE + *(pos->counter)) {		
+				&request_list_head, list) {
+				if (ring_buffer.counter ==
+				PSTRACE_BUF_SIZE + *(pos->counter)) {
 					copy_from_buf_to_req(&ring_buffer, pos);
 					pos->complete_flag = true;
 					list_del(&pos->list);
