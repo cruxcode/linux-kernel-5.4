@@ -49,31 +49,31 @@ SYSCALL_DEFINE1(pstrace_disable,
 	unsigned long flags;
 	printk("[pstrace_disable]");
 	spin_lock_irqsave(&process_list_lock, flags);
-	if(tracking_mode == TRACK_NONE){
+	if (tracking_mode == TRACK_NONE) {
 		spin_unlock_irqrestore(&process_list_lock, flags);
 		return 0;
-	}
-	else if(pid == -1){
+	} else if (pid == -1) {
 		tracking_mode = TRACK_NONE;
 		reset_enabled_and_disabled();
-	}
-	else if(tracking_mode == TRACK_ALL || tracking_mode == TRACK_ALL_EXCEPT){
-		 if(check_if_process_in_list(disabled_processes, pid,disabled_process_count) != -1){
+	} else if (tracking_mode == TRACK_ALL
+		|| tracking_mode == TRACK_ALL_EXCEPT) {
+		 if(check_if_process_in_list(disabled_processes,
+			pid, disabled_process_count) != -1){
 			spin_unlock_irqrestore(&process_list_lock, flags);
 			return 0;
-		}
-		else{
+		} else {
 			tracking_mode = TRACK_ALL_EXCEPT;
 			disabled_processes[disabled_process_count] = pid;
 			disabled_process_count = disabled_process_count + 1;
 		}
-	}else{
+	} else {
 		int loc;
-		loc = check_if_process_in_list(enabled_processes, pid,enabled_process_count);
-		if(loc >= 0){
+
+		loc = check_if_process_in_list(enabled_processes,
+			pid, enabled_process_count);
+		if (loc >= 0) {
 			enabled_processes[loc] = -1;
-		}
-		else{
+		} else {
 			spin_unlock_irqrestore(&process_list_lock, flags);
 			return -EINVAL;
 		}
@@ -88,46 +88,46 @@ SYSCALL_DEFINE1(pstrace_disable,
  * Copy the pstrace ring buffer info @buf.
  * If @pid == -1, copy all records; otherwise, only copy records of @pid.
  * If @counter > 0, the caller process will wait until a full buffer can
- * be returned after record @counter (i.e. return record @counter + 1 to 
+ * be returned after record @counter (i.e. return record @counter + 1 to
  * @counter + PSTRACE_BUF_SIZE), otherwise, return immediately.
  *
  * Returns the number of records copied.
  */
 SYSCALL_DEFINE3(pstrace_get,
-		pid_t , pid,
-		struct pstrace __user * , buf,
-		long __user * , counter)
+		pid_t, pid,
+		struct pstrace __user *, buf,
+		long __user *, counter)
 {
 	int success;
-	printk("[pstrace_get]");
 
-	if(true){
+	if (true) {
 		unsigned long flags;
 		long *kcounter;
 		struct pstrace *kbuf;
 		struct task_struct *handler;
 		struct request *req;
 		unsigned long ring_buf_flags;
-		
+
 
 		kcounter = kmalloc(sizeof(long), GFP_KERNEL);
-		if(!kcounter)
+		if (!kcounter)
 			return -ENOMEM;
 		success = copy_from_user(kcounter, counter, sizeof(long));
-		if(success != 0){
+		if (success != 0) {
 			kfree(kcounter);
 			return -EFAULT;
 		}
 
-		kbuf = kmalloc(sizeof(struct pstrace)*PSTRACE_BUF_SIZE, GFP_KERNEL);
+		kbuf = kmalloc(sizeof(struct pstrace)*PSTRACE_BUF_SIZE,
+			GFP_KERNEL);
 		if (!kbuf) {
 			kfree(kcounter);
 			return -ENOMEM;
 		}
-		
+
 		req = kmalloc(sizeof(struct request), GFP_KERNEL);
 
-		if(!req){
+		if (!req) {
 			kfree(kbuf);
 			kfree(kcounter);
 			return -ENOMEM;
@@ -136,8 +136,8 @@ SYSCALL_DEFINE3(pstrace_get,
 		create_request(req, pid, kcounter, kbuf);
 
 		spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
-		printk("[pstrace_enable] coun ter value %ld buffer counter %ld",*kcounter, ring_buffer.counter );
-		if((*kcounter)+PSTRACE_BUF_SIZE <= ring_buffer.counter || *kcounter <=0){
+		if ((*kcounter)+PSTRACE_BUF_SIZE <= ring_buffer.counter 
+			|| *kcounter <= 0) {
 			//Call add to buffer here
 			copy_from_buf_to_req(&ring_buffer, req);
 			spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
@@ -253,7 +253,7 @@ SYSCALL_DEFINE1(pstrace_clear,
 
 		i = ring_buffer.head;
 		//dump all those get requests which match pid
-		list_for_each_entry_safe(pos, next, &request_list_head, list) {							
+		list_for_each_entry_safe(pos, next, &request_list_head, list) {
 			if (pos->pid == pid) {
 				copy_from_buf_to_req(&ring_buffer, pos);
 				pos->complete_flag = true;
