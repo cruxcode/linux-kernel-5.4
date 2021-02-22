@@ -1,68 +1,8 @@
-
-#include<linux/sched.h>
-#include<linux/sched/task.h>
 #include<linux/syscalls.h>
 #include<linux/uaccess.h>
-
-#define PSTRACE_BUF_SIZE 500	/* The maximum size of the ring buffer */
-
-int process_tracking_flag = 0;  /*0 by default if process enable is being called for specific 
-				processes, -1 if process enable has been called with pid = -1
-				(signifying that we need to track all processes and 1 if 
-				disable has been called with -1*/
-
-int ring_buf_lock = 0;		/*If lock acquired, 1, else 0. 
-				TODO: FIGURE OUT HOW TO MAKE THIS ATOMIC USING LOCK_PREFIX*/
-
-pid_t enabled_processes[PSTRACE_BUF_SIZE]; 	/*Array that contains list of enabled processes
-						This is only used when 
-						process_tracking_flag != -1
-						Specifically useful when process_tracking_flag = 1
-						and enable call for a specific process comes.
-						NOTE: Can change this datastructure later when we are optimizing*/
-
-pid_t disabled_processes[PSTRACE_BUF_SIZE];	/*Array that contains list of disabled processes
-						This is only used when process_tracking_flag != 1. 
-						Specifically useful when process_tracking_flag = -1
-						and disable call for a specific process comes. In that case
-						we may need to provision more space if number of processes 
-						to disable > PSTRACE_BUF_SIZE.
-						NOTE: Can change this datastructure later when we are optimizing*/
-
-int ring_buf_counter = 0;
-
-/*
-Temporary way of checking if a pid exists. Returns NULL if it does not.
-This might be an overkill because everytime a pid exists, it will return
-the whole taskstruct.
-*/
-static struct task_struct *get_root(int root_pid)
-{
-        if (root_pid == 0)
-                return &init_task;
-
-        return find_task_by_vpid(root_pid);
-}
-
-struct pstrace ring_buf[PSTRACE_BUF_SIZE];
-
-/*TODO: We may need to implement another datastructure to put into ringbuf*/
-
-/*
-Plan of Action:
-1. At the moment we will only track state changes of given pids (or all pids if -1 is sent) after the enable_function is called. This means if a process is in exit zombie when the call was made, we will not keep track of that - when it becomes exit dead, we will be able to track it. Need to check if we should track current state of a process too.
-2. Currently, the plan is to call the pstrace_add from all the necessary places (such as core.c) and pstrace_add will do the check to add into ring buffer.
-3. Datastructure to be used for ring buffer - hashmap or circular linked list.
-4. Need to add the get_root function from hw2 to check if pid exists. Is there another way to do this?
-5. We will have a global flag that contains info for whether we need to 
-	a. track all processes
-	b. track specific processes (default)
-	c. track no process.
-6. Unless we get a pstrace_enable with -1 as pid, we will track only max of 500 processes at any point in time. 
-*/
-
-
-
+#include<linux/pstrace.h>
+#include <linux/string.h>
+#include <linux/slab.h>
 /*
  * Syscall No. 436
  * Enable the tracing for @pid. If -1 is given, trace all processes.
@@ -70,7 +10,32 @@ Plan of Action:
 SYSCALL_DEFINE1(pstrace_enable,
 		pid_t, pid)
 {
-	printk("Inside enable");
+	unsigned long flags;
+	printk("[pstrace_enable]");
+	spin_lock_irqsave(&process_list_lock, flags);
+	if(pid != -1 && !is_valid_pid(pid))
+		return -EINVAL;
+	if(tracking_mode == TRACK_ALL || tracking_mode == TRACK_ALL_EXCEPT){
+		spin_unlock_irqrestore(&process_list_lock, flags);
+		return 0;
+	}
+	else if(pid == -1){
+		tracking_mode = TRACK_ALL;
+		reset_enabled_and_disabled();
+	}
+	else{
+		int loc = check_if_process_in_list(enabled_processes, pid,enabled_process_count);
+		if(loc == -1){
+			tracking_mode = TRACK_SOME;
+			enabled_processes[enabled_process_count] = pid;
+			enabled_process_count = enabled_process_count + 1;
+		}else{
+			spin_unlock_irqrestore(&process_list_lock, flags);
+			return -EINVAL;
+		}
+	}
+	spin_unlock_irqrestore(&process_list_lock, flags);
+	printk("[pstrace_enable] tracking mode set to %d", tracking_mode);
 	return 0;
 }
 
@@ -81,7 +46,40 @@ SYSCALL_DEFINE1(pstrace_enable,
 SYSCALL_DEFINE1(pstrace_disable,
 		pid_t, pid)
 {
-	printk("Inside Disable");
+	unsigned long flags;
+	printk("[pstrace_disable]");
+	spin_lock_irqsave(&process_list_lock, flags);
+	if(tracking_mode == TRACK_NONE){
+		spin_unlock_irqrestore(&process_list_lock, flags);
+		return 0;
+	}
+	else if(pid == -1){
+		tracking_mode = TRACK_NONE;
+		reset_enabled_and_disabled();
+	}
+	else if(tracking_mode == TRACK_ALL || tracking_mode == TRACK_ALL_EXCEPT){
+		 if(check_if_process_in_list(disabled_processes, pid,disabled_process_count) != -1){
+			spin_unlock_irqrestore(&process_list_lock, flags);
+			return 0;
+		}
+		else{
+			tracking_mode = TRACK_ALL_EXCEPT;
+			disabled_processes[disabled_process_count] = pid;
+			disabled_process_count = disabled_process_count + 1;
+		}
+	}else{
+		int loc;
+		loc = check_if_process_in_list(enabled_processes, pid,enabled_process_count);
+		if(loc >= 0){
+			enabled_processes[loc] = -1;
+		}
+		else{
+			spin_unlock_irqrestore(&process_list_lock, flags);
+			return -EINVAL;
+		}
+	}
+	spin_unlock_irqrestore(&process_list_lock, flags);
+	printk("[pstrace_disable] tracking mode set to %d", tracking_mode);
 	return 0;
 }
 /*
@@ -98,9 +96,127 @@ SYSCALL_DEFINE1(pstrace_disable,
 SYSCALL_DEFINE3(pstrace_get,
 		pid_t , pid,
 		struct pstrace __user * , buf,
-		int __user * , counter)
+		long __user * , counter)
 {
-	printk("Inside Get");
+	int success;
+	printk("[pstrace_get]");
+
+	if(true){
+		unsigned long flags;
+		long *kcounter;
+		struct pstrace *kbuf;
+		struct task_struct *handler;
+		struct request *req;
+		unsigned long ring_buf_flags;
+		
+
+		kcounter = kmalloc(sizeof(long), GFP_KERNEL);
+		if(!kcounter)
+			return -ENOMEM;
+		success = copy_from_user(kcounter, counter, sizeof(long));
+		if(success != 0){
+			kfree(kcounter);
+			return -EFAULT;
+		}
+
+		kbuf = kmalloc(sizeof(struct pstrace)*PSTRACE_BUF_SIZE, GFP_KERNEL);
+		if (!kbuf) {
+			kfree(kcounter);
+			return -ENOMEM;
+		}
+		
+		req = kmalloc(sizeof(struct request), GFP_KERNEL);
+
+		if(!req){
+			kfree(kbuf);
+			kfree(kcounter);
+			return -ENOMEM;
+		}
+
+		create_request(req, pid, kcounter, kbuf);
+
+		spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
+		printk("[pstrace_enable] coun ter value %ld buffer counter %ld",*kcounter, ring_buffer.counter );
+		if((*kcounter)+PSTRACE_BUF_SIZE <= ring_buffer.counter || *kcounter <=0){
+			//Call add to buffer here
+			copy_from_buf_to_req(&ring_buffer, req);
+			spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
+			req->complete_flag = true;
+			success = copy_to_user(buf, kbuf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
+			if (success != 0){
+				kfree(req);
+				kfree(kbuf);
+				kfree(kcounter);
+				return -EFAULT;
+			}
+			success = copy_to_user(counter, kcounter, sizeof(long));
+			if (success != 0){
+				kfree(req);
+				kfree(kbuf);
+				kfree(kcounter);
+				return -EFAULT;
+			} 
+			kfree(req);
+			kfree(kbuf);
+			kfree(kcounter);
+			return 0;
+		}
+		spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
+		
+		spin_lock_irqsave(&request_list_lock, flags);
+		success = save_request(req);
+		spin_unlock_irqrestore(&request_list_lock, flags);
+		if(success < 0){
+			kfree(req);
+			kfree(kbuf);
+			kfree(kcounter);
+			return -ENOMEM;
+		}
+		
+
+		handler = listener(req);
+
+		if(!handler){
+			printk("[pstrace_get] handler null before while starts");
+		}
+
+		DEFINE_WAIT(wait);
+
+		while(!(req->complete_flag)){
+			printk("[pstrace_enable] calling prepare_to_sleep");
+			prepare_to_wait(&pstrace_wait_q, &wait, TASK_INTERRUPTIBLE);
+			if(signal_pending(current)){
+				printk("[pstrace_get] signal is pending");
+				if(!handler)
+					printk(KERN_WARNING "[pstrace_get] handler is null");
+				else
+					thread_cleanup(handler);
+				break;
+			}
+			schedule();
+			printk("[pstrace_enable] woke up from sleep");
+		}
+		printk("[pstrace_enable] calling finish_wait");
+		finish_wait(&pstrace_wait_q, &wait);
+		printk("[pstrace_enable] finsihed waiting");
+		success = copy_to_user(buf, kbuf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
+		if (success != 0){
+			kfree(req);
+			kfree(kbuf);
+			kfree(kcounter);
+			return -EFAULT;
+		}
+		success = copy_to_user(counter, kcounter, sizeof(long));
+		if (success != 0){
+			kfree(req);
+			kfree(kbuf);
+			kfree(kcounter);
+			return -EFAULT;
+		} 
+		kfree(req);
+		kfree(kbuf);
+		kfree(kcounter);
+	}
 	return 0;
 }
 
@@ -114,54 +230,99 @@ SYSCALL_DEFINE3(pstrace_get,
 SYSCALL_DEFINE1(pstrace_clear,
 		pid_t , pid)
 {
-	printk("Inside Clear");
+	unsigned long ring_buf_flags;
+	unsigned long request_list_flags;
+	struct request *pos, *next;
+	printk("[pstrace_clear]");
+	spin_lock_irqsave(&request_list_lock, request_list_flags);
+	spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
+	if(pid == -1){
+		
+		//for evert element in the request list empty			
+		list_for_each_entry_safe(pos, next, &request_list_head, list){	
+			
+			copy_from_buf_to_req(&ring_buffer, pos);			
+			//memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);//replace with the function Shyam comes up here
+			//*(pos->counter) = ring_buffer.counter;
+			pos->complete_flag = true;
+			list_del(&pos->list);
+		}
+		ring_buffer.head = 0;
+		ring_buffer.current_size = 0;
+	}else{
+		int i;
+		int current_iteration;
+		i = ring_buffer.head;
+		//dump all those get requests which match pid
+		list_for_each_entry_safe(pos, next, &request_list_head, list){	
+										
+			if (pos->pid==pid){
+				copy_from_buf_to_req(&ring_buffer, pos);		
+				//memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);//replace with the function Shyam comes up here
+				//*(pos->counter) = ring_buffer.counter;
+				pos->complete_flag = true;
+				list_del(&pos->list);
+			}
+		}
+		//remove the pid matching the clear from ring buffer
+		for (current_iteration = 0;current_iteration < ring_buffer.current_size;current_iteration++){
+			if(ring_buffer.buf[i].pid == pid)
+				ring_buffer.buf[ring_buffer.head].pid = -1;
+			i = (i+1)%PSTRACE_BUF_SIZE;
+		}
+	}
+	spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
+	spin_unlock_irqrestore(&request_list_lock, request_list_flags);
 	return 0;
 }
 
 /* Add a record of the state change into the ring buffer. */
 void pstrace_add(struct task_struct *p){
-	bool to_track = false;
-	
-	if (process_tracking_flag != -1){
-		int i;	
-		for (i = 0; i < PSTRACE_BUF_SIZE; i++){
-			if (p->pid == enabled_processes[i]){
-				to_track = true;
-				break;	
+	unsigned long flags;
+	unsigned long ring_buf_flags;
+	unsigned long request_list_flags;
+	if((p->state & __TASK_STOPPED) || p->state == TASK_INTERRUPTIBLE 
+		|| (p->state & TASK_UNINTERRUPTIBLE)|| p->state == TASK_RUNNING
+		|| p->exit_state == EXIT_DEAD || p->exit_state == EXIT_ZOMBIE){
+		spin_lock_irqsave(&process_list_lock, flags);
+		if (tracking_mode == TRACK_ALL || 
+			(tracking_mode == TRACK_ALL_EXCEPT && check_if_process_in_list(disabled_processes, p->pid,disabled_process_count)==-1) 
+			|| 
+			(tracking_mode == TRACK_SOME && check_if_process_in_list(enabled_processes, p->pid,enabled_process_count)!=-1) 
+			){
+			struct request *pos, *next;
+			long state_to_be_stored;
+			spin_unlock_irqrestore(&process_list_lock, flags);
+			local_irq_save(flags);
+			spin_lock_irqsave(&request_list_lock, request_list_flags);
+			spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
+			memcpy(ring_buffer.buf[ring_buffer.head].comm, p->comm, sizeof(char)*16);
+			ring_buffer.buf[ring_buffer.head].pid = p->pid;
+			state_to_be_stored = p->state;
+			if(p->exit_state == EXIT_DEAD || p->exit_state == EXIT_ZOMBIE)
+				state_to_be_stored = p->exit_state;
+			ring_buffer.buf[ring_buffer.head].state = state_to_be_stored;
+			ring_buffer.head = (ring_buffer.head + 1) % PSTRACE_BUF_SIZE;
+			ring_buffer.counter += 1;
+			ring_buffer.current_size += 1;
+			if (ring_buffer.current_size > PSTRACE_BUF_SIZE){
+				ring_buffer.current_size = PSTRACE_BUF_SIZE;
+			}			
+			list_for_each_entry_safe(pos, next, &request_list_head, list){						
+				if (ring_buffer.counter == PSTRACE_BUF_SIZE + *(pos->counter)){		
+					//memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
+					//*(pos->counter) = ring_buffer.counter;
+					copy_from_buf_to_req(&ring_buffer, pos);
+					pos->complete_flag = true;
+					list_del(&pos->list);
+				}
 			}
+			spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
+			spin_unlock_irqrestore(&request_list_lock, request_list_flags);
+			local_irq_restore(flags);
+		}else{
+			spin_unlock_irqrestore(&process_list_lock, flags);
 		}
+				
 	}
-	else{
-		to_track = true;
-	}
-	if (to_track){
-		struct pstrace tmp_pstrace;
-		int num_chars = 0;
-		while (p->comm[num_chars] != '\0'){
-			tmp_pstrace.comm[num_chars] = p->comm[num_chars];
-			num_chars += 1;
-		}
-		//tmp_pstrace.comm = p->comm;
-		tmp_pstrace.pid = p->pid;
-		if (p->state <= 0){
-			tmp_pstrace.state = p->state;
-		}
-		else{
-			tmp_pstrace.state = p->exit_state;		/*Will this cause problems because 
-									tmp_pstrace.state is of type long
-									whereas p.exit_state is an int.*/		
-		}
-		while(true){						/*TODO: Have a max wait time here
-									for lock to be acquired.*/
-			if (ring_buf_lock == 0){
-				ring_buf_lock = 1;
-				ring_buf[ring_buf_counter % PSTRACE_BUF_SIZE] = tmp_pstrace;
-				ring_buf_counter += 1;
-				ring_buf_lock = 0;
-				break;
-			}
-		}
-	}
-	printk("Inside Add");
-	return;
 }
