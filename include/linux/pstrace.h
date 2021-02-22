@@ -145,25 +145,28 @@ void copy_from_buf_to_req(struct pstrace_buf *buf, struct request *req)
 	printk("[copy_from_buf_to_req] called");
 	if(buf->current_size < PSTRACE_BUF_SIZE){
 		long j = 0, i;
-		for(i = 0; i < buf->current_size; i++){
+		for (i = 0; i < buf->current_size; i++) {
 			struct pstrace *curr = buf->buf + i;
-			if(curr->pid != -1 && (req->pid ==-1 || req->pid==curr->pid)){
+			if (curr->pid != -1
+			&& (req->pid ==-1 || req->pid==curr->pid)) {
 				*(req->buf + j) = *curr;
 				j++;
 			}
 		}
 	} else {
 		long j = 0, i;
-		for(i = buf->head; i < PSTRACE_BUF_SIZE; i++){
+		for (i = buf->head; i < PSTRACE_BUF_SIZE; i++) {
 			struct pstrace *curr = buf->buf + i;
-			if(curr->pid != -1 && (req->pid ==-1 || req->pid==curr->pid)){
+			if (curr->pid != -1
+			&& (req->pid ==-1 || req->pid==curr->pid)) {
 				*(req->buf + j) = *curr;
 				j++;
 			}
 		}
-		for(i = 0; i < buf->head; i++){
+		for (i = 0; i < buf->head; i++) {
 			struct pstrace *curr = buf->buf + i;
-			if(curr->pid != -1 && (req->pid ==-1 || req->pid==curr->pid)){
+			if (curr->pid != -1
+			&& (req->pid ==-1 || req->pid==curr->pid)) {
 				*(req->buf + j) = *curr;
 				j++;
 			}
@@ -175,17 +178,19 @@ void copy_from_buf_to_req(struct pstrace_buf *buf, struct request *req)
 
 static struct task_struct *get_root(int root_pid)
 {
-        if (root_pid == 0)
-                return &init_task;
+	if (root_pid == 0)
+		return &init_task;
 
-        return find_task_by_vpid(root_pid);
+	return find_task_by_vpid(root_pid);
 }
 
-int is_valid_pid(pid_t pid){
+int is_valid_pid(pid_t pid)
+{
 
 	struct task_struct *root_task;
+
 	root_task = get_root(pid);
-	if(!root_task){
+	if (!root_task) {
 		return 0;
 	}
 	return 1;

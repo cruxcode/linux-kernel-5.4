@@ -13,23 +13,23 @@ SYSCALL_DEFINE1(pstrace_enable,
 	unsigned long flags;
 	printk("[pstrace_enable]");
 	spin_lock_irqsave(&process_list_lock, flags);
-	if(pid != -1 && !is_valid_pid(pid))
+	if (pid != -1 && !is_valid_pid(pid))
 		return -EINVAL;
-	if(tracking_mode == TRACK_ALL || tracking_mode == TRACK_ALL_EXCEPT){
+	if (tracking_mode == TRACK_ALL || tracking_mode == TRACK_ALL_EXCEPT) {
 		spin_unlock_irqrestore(&process_list_lock, flags);
 		return 0;
-	}
-	else if(pid == -1){
+	} else if(pid == -1) {
 		tracking_mode = TRACK_ALL;
 		reset_enabled_and_disabled();
-	}
-	else{
-		int loc = check_if_process_in_list(enabled_processes, pid,enabled_process_count);
-		if(loc == -1){
+	} else {
+		int loc = check_if_process_in_list(enabled_processes,
+				pid, enabled_process_count);
+
+		if (loc == -1) {
 			tracking_mode = TRACK_SOME;
 			enabled_processes[enabled_process_count] = pid;
 			enabled_process_count = enabled_process_count + 1;
-		}else{
+		} else {
 			spin_unlock_irqrestore(&process_list_lock, flags);
 			return -EINVAL;
 		}
@@ -57,7 +57,7 @@ SYSCALL_DEFINE1(pstrace_disable,
 		reset_enabled_and_disabled();
 	} else if (tracking_mode == TRACK_ALL
 		|| tracking_mode == TRACK_ALL_EXCEPT) {
-		 if(check_if_process_in_list(disabled_processes,
+		 if (check_if_process_in_list(disabled_processes,
 			pid, disabled_process_count) != -1){
 			spin_unlock_irqrestore(&process_list_lock, flags);
 			return 0;
@@ -136,7 +136,7 @@ SYSCALL_DEFINE3(pstrace_get,
 		create_request(req, pid, kcounter, kbuf);
 
 		spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
-		if ((*kcounter)+PSTRACE_BUF_SIZE <= ring_buffer.counter 
+		if ((*kcounter)+PSTRACE_BUF_SIZE <= ring_buffer.counter
 			|| *kcounter <= 0) {
 			//Call add to buffer here
 			copy_from_buf_to_req(&ring_buffer, req);
