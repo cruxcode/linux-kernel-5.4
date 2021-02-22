@@ -286,29 +286,37 @@ void pstrace_add(struct task_struct *p){
 		|| p->exit_state == EXIT_DEAD || p->exit_state == EXIT_ZOMBIE){
 		spin_lock_irqsave(&process_list_lock, flags);
 		if (tracking_mode == TRACK_ALL || 
-			(tracking_mode == TRACK_ALL_EXCEPT && check_if_process_in_list(disabled_processes, p->pid,disabled_process_count)==-1) 
+			(tracking_mode == TRACK_ALL_EXCEPT &&
+	check_if_process_in_list(disabled_processes,
+	p->pid,disabled_process_count)==-1) 
 			|| 
-			(tracking_mode == TRACK_SOME && check_if_process_in_list(enabled_processes, p->pid,enabled_process_count)!=-1) 
+			(tracking_mode == TRACK_SOME &&
+		check_if_process_in_list(enabled_processes,
+		p->pid,enabled_process_count) != -1) 
 			){
 			struct request *pos, *next;
 			long state_to_be_stored;
+
 			spin_unlock_irqrestore(&process_list_lock, flags);
 			local_irq_save(flags);
-			spin_lock_irqsave(&request_list_lock, request_list_flags);
+			spin_lock_irqsave(&request_list_lock,
+				request_list_flags);
 			spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
 			memcpy(ring_buffer.buf[ring_buffer.head].comm,
 				p->comm, sizeof(char)*16);
 			ring_buffer.buf[ring_buffer.head].pid = p->pid;
 			state_to_be_stored = p->state;
-			if(p->exit_state == EXIT_DEAD || p->exit_state == EXIT_ZOMBIE)
+			if (p->exit_state == EXIT_DEAD
+				|| p->exit_state == EXIT_ZOMBIE)
 				state_to_be_stored = p->exit_state;
-			ring_buffer.buf[ring_buffer.head].state = state_to_be_stored;
-			ring_buffer.head = (ring_buffer.head + 1) % PSTRACE_BUF_SIZE;
+			ring_buffer.buf[ring_buffer.head].state =
+					state_to_be_stored;
+			ring_buffer.head = (ring_buffer.head + 1)
+				% PSTRACE_BUF_SIZE;
 			ring_buffer.counter += 1;
 			ring_buffer.current_size += 1;
-			if (ring_buffer.current_size > PSTRACE_BUF_SIZE) {
+			if (ring_buffer.current_size > PSTRACE_BUF_SIZE)
 				ring_buffer.current_size = PSTRACE_BUF_SIZE;
-			}			
 			list_for_each_entry_safe(pos, next,
 				&request_list_head, list) {
 				if (ring_buffer.counter ==
