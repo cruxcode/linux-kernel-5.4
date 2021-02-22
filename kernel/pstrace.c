@@ -42,11 +42,12 @@ SYSCALL_DEFINE1(pstrace_enable,
 /*
  * Syscall No. 437
  * Disable the tracing for @pid. If -1 is given, stop tracing all processes.
-*/
+ */
 SYSCALL_DEFINE1(pstrace_disable,
 		pid_t, pid)
 {
 	unsigned long flags;
+
 	printk("[pstrace_disable]");
 	spin_lock_irqsave(&process_list_lock, flags);
 	if (tracking_mode == TRACK_NONE) {
@@ -57,7 +58,7 @@ SYSCALL_DEFINE1(pstrace_disable,
 		reset_enabled_and_disabled();
 	} else if (tracking_mode == TRACK_ALL
 		|| tracking_mode == TRACK_ALL_EXCEPT) {
-		 if (check_if_process_in_list(disabled_processes,
+		if (check_if_process_in_list(disabled_processes,
 			pid, disabled_process_count) != -1){
 			spin_unlock_irqrestore(&process_list_lock, flags);
 			return 0;
@@ -142,7 +143,8 @@ SYSCALL_DEFINE3(pstrace_get,
 			copy_from_buf_to_req(&ring_buffer, req);
 			spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
 			req->complete_flag = true;
-			success = copy_to_user(buf, kbuf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
+			success = copy_to_user(buf, kbuf,
+			sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
 			if (success != 0) {
 				kfree(req);
 				kfree(kbuf);
@@ -175,9 +177,8 @@ SYSCALL_DEFINE3(pstrace_get,
 
 		handler = listener(req);
 
-		if (!handler) {
+		if (!handler)
 			printk("[pstrace_get] handler null before while starts");
-		}
 
 		DEFINE_WAIT(wait);
 
