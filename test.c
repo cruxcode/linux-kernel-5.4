@@ -49,9 +49,6 @@ int main(int argc, char **argv)
 			}
 			for (int j = 0; j < 5; j++){
 				struct pstrace *res = buf + j;
-				if (res->state != 0){
-					continue;
-				}
 				printf("pid %u state %lu comm %s\n", res->pid, res->state, res->comm);
 			}
 			sys_res = syscall(437, pid);
