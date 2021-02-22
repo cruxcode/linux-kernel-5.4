@@ -105,6 +105,7 @@ SYSCALL_DEFINE3(pstrace_get,
 		struct pstrace *kbuf;
 		struct task_struct *handler;
 		struct request *req;
+		unsigned long ring_buf_flags;
 		
 
 		kcounter = kmalloc(sizeof(long), GFP_KERNEL);
@@ -132,10 +133,12 @@ SYSCALL_DEFINE3(pstrace_get,
 
 		create_request(req, pid, kcounter, kbuf);
 
+		spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
 		printk("[pstrace_enable] coun ter value %ld buffer counter %ld",*kcounter, ring_buffer.counter );
 		if((*kcounter)+PSTRACE_BUF_SIZE <= ring_buffer.counter || *kcounter <=0){
 			//Call add to buffer here
 			copy_from_buf_to_req(&ring_buffer, req);
+			spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
 			req->complete_flag = true;
 			success = copy_to_user(buf, kbuf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
 			if (success != 0){
@@ -156,6 +159,7 @@ SYSCALL_DEFINE3(pstrace_get,
 			kfree(kcounter);
 			return 0;
 		}
+		spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
 		
 		spin_lock_irqsave(&request_list_lock, flags);
 		success = save_request(req);
@@ -175,6 +179,7 @@ SYSCALL_DEFINE3(pstrace_get,
 		}
 
 		DEFINE_WAIT(wait);
+
 		while(!(req->complete_flag)){
 			printk("[pstrace_enable] calling prepare_to_sleep");
 			prepare_to_wait(&pstrace_wait_q, &wait, TASK_INTERRUPTIBLE);
