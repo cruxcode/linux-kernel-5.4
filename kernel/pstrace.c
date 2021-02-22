@@ -281,18 +281,22 @@ void pstrace_add(struct task_struct *p){
 	unsigned long flags;
 	unsigned long ring_buf_flags;
 	unsigned long request_list_flags;
-	if((p->state & __TASK_STOPPED) || p->state == TASK_INTERRUPTIBLE 
-		|| (p->state & TASK_UNINTERRUPTIBLE)|| p->state == TASK_RUNNING
-		|| p->exit_state == EXIT_DEAD || p->exit_state == EXIT_ZOMBIE){
+
+	if ((p->state & __TASK_STOPPED)
+		|| p->state == TASK_INTERRUPTIBLE
+		|| (p->state & TASK_UNINTERRUPTIBLE)
+		|| p->state == TASK_RUNNING
+		|| p->exit_state == EXIT_DEAD
+		|| p->exit_state == EXIT_ZOMBIE) {
 		spin_lock_irqsave(&process_list_lock, flags);
-		if (tracking_mode == TRACK_ALL || 
+		if (tracking_mode == TRACK_ALL ||
 			(tracking_mode == TRACK_ALL_EXCEPT &&
 	check_if_process_in_list(disabled_processes,
-	p->pid,disabled_process_count)==-1) 
-			|| 
+	p->pid, disabled_process_count) == -1)
+			||
 			(tracking_mode == TRACK_SOME &&
 		check_if_process_in_list(enabled_processes,
-		p->pid,enabled_process_count) != -1) 
+		p->pid, enabled_process_count) != -1)
 			){
 			struct request *pos, *next;
 			long state_to_be_stored;
