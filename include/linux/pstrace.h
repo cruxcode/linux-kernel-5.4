@@ -100,7 +100,7 @@ struct task_struct *listener(struct request *data){
 	char name[] = "pstrace_thread";
 	printk("[listener] called");
 	p = kthread_run(listener_fn, data, name);
-	if(!p){
+	if (!p) {
 		printk("[listener] task_struct failed to create, null pointer");	
 	}
 	printk("[listener] exiting listener");
@@ -111,25 +111,28 @@ void thread_cleanup(struct task_struct *p)
 {
 	int failed;
 	printk("[thread_cleanup] called");
-	if(!p)
+	if (!p)
 		printk("[thread_cleanup] p is null");
 	failed = kthread_stop(p);
-	if(!failed)
+	if (!failed)
 		printk("[thread_cleanup] thread stopped success");
 }
 
 
-int check_if_process_in_list(pid_t * processes_list,pid_t curr_pid,int count){
+int check_if_process_in_list(pid_t *processes_list, pid_t curr_pid, int count)
+{
 	int i;
-	for(i = 0; i < count ; ++i)
-  		if(curr_pid == processes_list[i] && curr_pid != -1)
+
+	for (i = 0; i < count ; ++i)
+		if (curr_pid == processes_list[i] && curr_pid != -1)
 			return i;
 	return -1;
 }
 
 
-int reset_enabled_and_disabled(void){
-	int i,j;
+int reset_enabled_and_disabled(void)
+{
+	int i, j;
 	for (i = 0; i < enabled_process_count; i++)
 		enabled_processes[i] = -1;
 	for (j = 0; j < disabled_process_count ; j++)
