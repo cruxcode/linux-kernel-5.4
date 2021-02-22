@@ -296,7 +296,8 @@ void pstrace_add(struct task_struct *p){
 			local_irq_save(flags);
 			spin_lock_irqsave(&request_list_lock, request_list_flags);
 			spin_lock_irqsave(&ring_buf_lock, ring_buf_flags);
-			memcpy(ring_buffer.buf[ring_buffer.head].comm, p->comm, sizeof(char)*16);
+			memcpy(ring_buffer.buf[ring_buffer.head].comm,
+				p->comm, sizeof(char)*16);
 			ring_buffer.buf[ring_buffer.head].pid = p->pid;
 			state_to_be_stored = p->state;
 			if(p->exit_state == EXIT_DEAD || p->exit_state == EXIT_ZOMBIE)
@@ -305,20 +306,20 @@ void pstrace_add(struct task_struct *p){
 			ring_buffer.head = (ring_buffer.head + 1) % PSTRACE_BUF_SIZE;
 			ring_buffer.counter += 1;
 			ring_buffer.current_size += 1;
-			if (ring_buffer.current_size > PSTRACE_BUF_SIZE){
+			if (ring_buffer.current_size > PSTRACE_BUF_SIZE) {
 				ring_buffer.current_size = PSTRACE_BUF_SIZE;
 			}			
-			list_for_each_entry_safe(pos, next, &request_list_head, list){						
-				if (ring_buffer.counter == PSTRACE_BUF_SIZE + *(pos->counter)){		
-					//memcpy(pos->buf, ring_buffer.buf, sizeof(struct pstrace) * PSTRACE_BUF_SIZE);
-					//*(pos->counter) = ring_buffer.counter;
+			list_for_each_entry_safe(pos, next,
+				&request_list_head, list) {						
+				if (ring_buffer.counter == 
+					PSTRACE_BUF_SIZE + *(pos->counter)) {		
 					copy_from_buf_to_req(&ring_buffer, pos);
 					pos->complete_flag = true;
 					list_del(&pos->list);
 				}
 			}
 			spin_unlock_irqrestore(&ring_buf_lock, ring_buf_flags);
-			spin_unlock_irqrestore(&request_list_lock, 
+			spin_unlock_irqrestore(&request_list_lock,
 					request_list_flags);
 			local_irq_restore(flags);
 		} else {
