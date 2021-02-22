@@ -1318,10 +1318,10 @@ static inline void dequeue_task(struct rq *rq, struct task_struct *p, int flags)
 
 void activate_task(struct rq *rq, struct task_struct *p, int flags)
 {
-	pstrace_add(p);
 	if (task_contributes_to_load(p))
 		rq->nr_uninterruptible--;
 
+	//pstrace_add(p);
 	enqueue_task(rq, p, flags);
 
 	p->on_rq = TASK_ON_RQ_QUEUED;
@@ -1330,10 +1330,9 @@ void activate_task(struct rq *rq, struct task_struct *p, int flags)
 void deactivate_task(struct rq *rq, struct task_struct *p, int flags)
 {
 	p->on_rq = (flags & DEQUEUE_SLEEP) ? 0 : TASK_ON_RQ_MIGRATING;
-
 	if (task_contributes_to_load(p))
 		rq->nr_uninterruptible++;
-	pstrace_add(p);
+	//pstrace_add(p);
 	dequeue_task(rq, p, flags);
 }
 
@@ -4077,6 +4076,8 @@ static void __sched notrace __schedule(bool preempt)
 
 		trace_sched_switch(preempt, prev, next);
 
+		pstrace_add(prev);
+		pstrace_add(next);
 		/* Also unlocks the rq: */
 		rq = context_switch(rq, prev, next, &rf);
 	} else {

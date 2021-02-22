@@ -281,10 +281,9 @@ void pstrace_add(struct task_struct *p){
 	unsigned long flags;
 	unsigned long ring_buf_flags;
 	unsigned long request_list_flags;
-	if(p->state == TASK_STOPPED || p->state == TASK_INTERRUPTIBLE 
-		|| p->state == TASK_UNINTERRUPTIBLE|| p->state == TASK_RUNNING
+	if((p->state & __TASK_STOPPED) || p->state == TASK_INTERRUPTIBLE 
+		|| (p->state & TASK_UNINTERRUPTIBLE)|| p->state == TASK_RUNNING
 		|| p->exit_state == EXIT_DEAD || p->exit_state == EXIT_ZOMBIE){
-		//printk("[pstrace_add]");
 		spin_lock_irqsave(&process_list_lock, flags);
 		if (tracking_mode == TRACK_ALL || 
 			(tracking_mode == TRACK_ALL_EXCEPT && check_if_process_in_list(disabled_processes, p->pid,disabled_process_count)==-1) 
