@@ -101,7 +101,7 @@ SYSCALL_DEFINE3(pstrace_get,
 	int success;
 	printk("[pstrace_get]");
 
-	if(tracking_mode == TRACK_ALL){
+	if(true){
 		unsigned long flags;
 		long *kcounter;
 		struct pstrace *kbuf;
