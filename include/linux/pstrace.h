@@ -169,3 +169,23 @@ void copy_from_buf_to_req(struct pstrace_buf *buf, struct request *req)
 	}
 	*(req->counter) = buf->counter;
 }
+
+
+static struct task_struct *get_root(int root_pid)
+{
+        if (root_pid == 0)
+                return &init_task;
+
+        return find_task_by_vpid(root_pid);
+}
+
+int is_valid_pid(pid_t pid){
+
+	struct task_struct *root_task;
+	root_task = get_root(pid);
+	if(!root_task){
+		return 0;
+	}
+	return 1;
+}
+

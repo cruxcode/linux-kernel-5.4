@@ -13,6 +13,8 @@ SYSCALL_DEFINE1(pstrace_enable,
 	unsigned long flags;
 	printk("[pstrace_enable]");
 	spin_lock_irqsave(&process_list_lock, flags);
+	if(pid != -1 && !is_valid_pid(pid))
+		return -EINVAL;
 	if(tracking_mode == TRACK_ALL || tracking_mode == TRACK_ALL_EXCEPT){
 		spin_unlock_irqrestore(&process_list_lock, flags);
 		return 0;
@@ -29,7 +31,7 @@ SYSCALL_DEFINE1(pstrace_enable,
 			enabled_process_count = enabled_process_count + 1;
 		}else{
 			spin_unlock_irqrestore(&process_list_lock, flags);
-			return -1; //what happens if pid is already in enable list?
+			return -EINVAL;
 		}
 	}
 	spin_unlock_irqrestore(&process_list_lock, flags);
@@ -73,7 +75,7 @@ SYSCALL_DEFINE1(pstrace_disable,
 		}
 		else{
 			spin_unlock_irqrestore(&process_list_lock, flags);
-			return -1;
+			return -EINVAL;
 		}
 	}
 	spin_unlock_irqrestore(&process_list_lock, flags);
