@@ -1139,7 +1139,6 @@ asmlinkage long sys_sgetmask(void);
 asmlinkage long sys_ssetmask(int newmask);
 asmlinkage long sys_signal(int sig, __sighandler_t handler);
 
-
 /* obsolete: kernel/sched/core.c */
 asmlinkage long sys_nice(int increment);
 
