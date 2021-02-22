@@ -50,8 +50,8 @@ DECLARE_WAIT_QUEUE_HEAD(pstrace_wait_q);
 LIST_HEAD(request_list_head);
 DEFINE_SPINLOCK(request_list_lock);
 
-void create_request(struct request *req, pid_t pid, 
-long *counter, 
+void create_request(struct request *req, pid_t pid,
+long *counter,
 struct pstrace *buf)
 {
 	req->pid = pid;
@@ -81,11 +81,11 @@ int listener_fn(void *data)
 	struct request *new_data;
 	new_data = (struct request *)data;
 	printk("[listener_fn] called");
-	while(true){
-		if(kthread_should_stop()){
+	while (true) {
+		if (kthread_should_stop()) {
 			break;
 		}
-		if (new_data->complete_flag){
+		if (new_data->complete_flag) {
 			wake_up(&pstrace_wait_q);
 			break;
 		}
@@ -95,13 +95,14 @@ int listener_fn(void *data)
 	return 0;
 }
 
-struct task_struct *listener(struct request *data){
+struct task_struct *listener(struct request *data)
+{
 	struct task_struct *p;
 	char name[] = "pstrace_thread";
 	printk("[listener] called");
 	p = kthread_run(listener_fn, data, name);
 	if (!p) {
-		printk("[listener] task_struct failed to create, null pointer");	
+		printk("[listener] task_struct failed to create, null pointer");
 	}
 	printk("[listener] exiting listener");
 	return p;
