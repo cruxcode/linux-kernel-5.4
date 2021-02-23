@@ -270,18 +270,18 @@ SYSCALL_DEFINE1(pstrace_clear,
 		for (current_iteration = 0;
 		current_iteration < ring_buffer.current_size;
 		current_iteration++) {
-			if (ring_buffer.buf[i].pid == pid){
+			if (ring_buffer.buf[i].pid == pid) {
 				int j;
 				int k;
-				j=i;
-				for(k=current_iteration;
-				k<ring_buffer.current_size;
-				k++){
+				j = i;
+				for (k = current_iteration;
+				k < ring_buffer.current_size;
+				k++) {
 					ring_buffer.buf[j] =
 					ring_buffer.buf
-					[(j +1) % PSTRACE_BUF_SIZE];
+					[(j + 1) % PSTRACE_BUF_SIZE];
 
-					j = (j +1)
+					j = (j + 1)
 					% PSTRACE_BUF_SIZE;
 				}
 
