@@ -87,7 +87,7 @@ int main(int argc, char **argv)
 	outfp = fopen("pstrace_output.txt", "w");	
 	for (int j = 0; j < pstrace_buf_size * num_processes ; j++){
 		if(j % pstrace_buf_size == 0)
-			fprintf(outfp, "pid enabled is %d\n", enabled[j%pstrace_buf_size]);
+			fprintf(outfp, "pid enabled is %d\n", enabled[j/pstrace_buf_size]);
 		struct pstrace *res = buf + j;	
 		fprintf(outfp, "pid %u state %lu comm %s\n", res->pid, res->state, res->comm);
 	}
