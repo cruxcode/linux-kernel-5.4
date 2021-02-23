@@ -21,39 +21,40 @@ int main(int argc, char **argv)
 
 	FILE *fp, *outfp;
 
-	struct pstrace *buf = malloc(pstrace_buf_size*num_processes*sizeof(struct pstrace));
+	struct pstrace *buf = malloc(pstrace_buf_size*
+			num_processes*sizeof(struct pstrace));
 	long *counter = malloc(sizeof(long));
 	int sys_res = 0;
 	*counter = 1;
 	pid_t enabled[num_processes];
 	pid_t pid;
-	for (int i = 0; i < num_processes; i++){	
+
+	for (int i = 0; i < num_processes; i++) {
 		pid = fork();
-		if (pid < 0){
+		if (pid < 0) {
 			free(buf);
 			free(counter);
 			printf("Fork Failed\n");
 			return 1;
-		}
-		else if (pid == 0) {
+		} else if (pid == 0) {
 			int j = 0;
+
 			signal(SIGTSTP, SIG_DFL);
-			while(j < 500*(i + 1)){
+			while (j < 500*(i + 1)) {
 				sleep(0.01);
 				j++;
 			}
-			if ((i % 2) == 0){
+			if ((i % 2) == 0) {
 				raise(SIGTSTP);
-				fp = fopen("/dev/tty0","w");
+				fp = fopen("/dev/tty0", "w");
 				fprintf(fp, "Hello from curxcode");
 				fclose(fp);
 				exit(0);
 			}
-		}
-		else{
-			enabled[i] = pid;	
+		} else {
+			enabled[i] = pid;
 			sys_res = syscall(436, pid);
-			if(sys_res != 0){
+			if (sys_res != 0) {
 				free(buf);
 				free(counter);
 				exit(-1);
@@ -69,27 +70,31 @@ int main(int argc, char **argv)
 			sleep(0.1);
 			wait(&sys_res);
 			signal(SIGCHLD, SIG_IGN);
-			sys_res = syscall(438, pid, buf + pstrace_buf_size*i , counter);
-			if (sys_res < 0){
-				free(counter);
-				free(buf);
-				exit(-1);
-			}	
-			sys_res = syscall(437, pid);
-			if (sys_res < 0){
+			sys_res = syscall(438, pid, buf + pstrace_buf_size*i,
+					counter);
+			if (sys_res < 0) {
 				free(counter);
 				free(buf);
 				exit(-1);
 			}
-		}	
+			sys_res = syscall(437, pid);
+			if (sys_res < 0) {
+				free(counter);
+				free(buf);
+				exit(-1);
+			}
+		}
 	}
-	
-	outfp = fopen("pstrace_output.txt", "w");	
-	for (int j = 0; j < pstrace_buf_size * num_processes ; j++){
-		if(j % pstrace_buf_size == 0)
-			fprintf(outfp, "pid enabled is %d\n", enabled[j/pstrace_buf_size]);
-		struct pstrace *res = buf + j;	
-		fprintf(outfp, "pid %u state %lu comm %s\n", res->pid, res->state, res->comm);
+
+	outfp = fopen("pstrace_output.txt", "w");
+	for (int j = 0; j < pstrace_buf_size * num_processes ; j++) {
+		if (j % pstrace_buf_size == 0)
+			fprintf(outfp, "pid enabled is %d\n",
+					enabled[j/pstrace_buf_size]);
+		struct pstrace *res = buf + j;
+
+		fprintf(outfp, "pid %u state %lu comm %s\n",
+				res->pid, res->state, res->comm);
 	}
 	fclose(outfp);
 	free(counter);

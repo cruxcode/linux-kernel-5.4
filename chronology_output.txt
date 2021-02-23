@@ -1,1005 +1,2508 @@
-THE PID I AM ENABLING 10381
+THE PID I AM ENABLING 1679
 sys_res after enable 0
-PID I AM DISABLING 10381
-STARTING ITERATION NUMBER 0 WITH COUNTER 302109
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-STARTING ITERATION NUMBER 1 WITH COUNTER 302609
-pid 10381 state 0 comm test_chronology
-pid 10381 state 260 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
-pid 10381 state 0 comm test_chronology
-pid 10381 state 1 comm test_chronology
+PID I AM DISABLING 1679
+STARTING ITERATION NUMBER 0 WITH COUNTER 285065
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 3270781056 state 6592 comm  pÂFS¡ÿÿˆ/JS¡ÿÿ€(ôÂS¡ÿÿÀ
+pid 3270740096 state 6628 comm @pÂFS¡ÿÿ
+pid 3270771840 state 6648 comm `pÂFS¡ÿÿ pÂFS¡ÿÿ€ôÂS¡ÿÿø
+pid 3270781056 state 6824 comm ÈpÂFS¡ÿÿ@pÂFS¡ÿÿ€(ôÂS¡ÿÿ¨
+pid 0 state 0 comm (qÂFS¡ÿÿ
+pid 0 state 0 comm €|Ñ\S¡ÿÿ
+pid 1187147872 state 18446639978144431232 comm 
+pid 1187147976 state 18446639978144431232 comm ¼
+pid 1187148008 state 18446639978144431232 comm Ğ
+pid 1187147904 state 0 comm 
+pid 0 state 0 comm 
+pid 1187148176 state 18446639977774346504 comm 
+pid 1187148208 state 18446639977774346608 comm €hÑ\S¡ÿÿ 
+pid 1187148240 state 18446639977774346640 comm €hÑ\S¡ÿÿ4
+pid 1187148272 state 18446639977774346672 comm €hÑ\S¡ÿÿ`
+pid 1187148304 state 18446639977774346704 comm €|Ñ\S¡ÿÿŒ
+pid 1187148408 state 18446639977774346736 comm €|Ñ\S¡ÿÿÔ
+pid 1187148568 state 18446639977774346536 comm €|Ñ\S¡ÿÿü
+pid 1245542528 state 0 comm 
+pid 12 state 18446639977774346904 comm 
+pid 7184 state 18446639977774346936 comm rÂFS¡ÿÿ€x=JS¡ÿÿ
+pid 7204 state 18446639977774346968 comm xrÂFS¡ÿÿ€x=JS¡ÿÿ$
+pid 7248 state 18446639977774347000 comm ˜rÂFS¡ÿÿ€x=JS¡ÿÿP
+pid 7304 state 18446639977774347104 comm ¸rÂFS¡ÿÿ€|Ñ\S¡ÿÿˆ
+pid 7376 state 18446639977774347424 comm ØrÂFS¡ÿÿ€|Ñ\S¡ÿÿĞ
+pid 0 state 18446639977832739968 comm 0rÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1245541504 state 7396 comm €sÂFS¡ÿÿørÂFS¡ÿÿ€t=JS¡ÿÿä
+pid 1245541504 state 7416 comm  sÂFS¡ÿÿ`sÂFS¡ÿÿ€t=JS¡ÿÿø
+pid 1245541504 state 7460 comm ÀsÂFS¡ÿÿ€sÂFS¡ÿÿ€t=JS¡ÿÿ$
+pid 3270781056 state 7648 comm àsÂFS¡ÿÿ sÂFS¡ÿÿ€(ôÂS¡ÿÿà
+pid 3270740096 state 7684 comm 
+pid 3270771840 state 7704 comm  tÂFS¡ÿÿàsÂFS¡ÿÿ€ôÂS¡ÿÿ
+pid 3270781056 state 7880 comm @tÂFS¡ÿÿ
+pid 4136907904 state 7900 comm `tÂFS¡ÿÿ tÂFS¡ÿÿ€4”öS¡ÿÿÜ
+pid 4136907904 state 7920 comm €tÂFS¡ÿÿ@tÂFS¡ÿÿ€4”öS¡ÿÿğ
+pid 4136907904 state 7980 comm ètÂFS¡ÿÿ`tÂFS¡ÿÿ€4”öS¡ÿÿ,
+pid 0 state 0 comm ¨uÂFS¡ÿÿsÂFS¡ÿÿ
+pid 0 state 0 comm €JS¡ÿÿ
+pid 1187148928 state 18446639977830421120 comm 
+pid 1187149032 state 18446639977830421120 comm @
+pid 1187149064 state 18446639977830421120 comm T
+pid 1187149096 state 18446639980724106368 comm €
+pid 1187149128 state 18446639980724106368 comm ¬
+pid 1187149160 state 18446639980724106368 comm ô
+pid 1187148960 state 0 comm  
+pid 0 state 0 comm 
+pid 1187149328 state 18446639977774347656 comm 
+pid 1187149360 state 18446639977774347760 comm €\óÂS¡ÿÿ0 
+pid 1187149392 state 18446639977774347792 comm €\óÂS¡ÿÿD 
+pid 1187149424 state 18446639977774347824 comm €\óÂS¡ÿÿp 
+pid 1187149528 state 18446639977774347856 comm €4”öS¡ÿÿ¨ 
+pid 1187149976 state 18446639977774347688 comm €4”öS¡ÿÿğ 
+pid 3270747264 state 0 comm 
+pid 12 state 18446639977774348024 comm 
+pid 8452 state 18446639977774348056 comm pvÂFS¡ÿÿ€¤óÂS¡ÿÿ!
+pid 8472 state 18446639977774348088 comm ØvÂFS¡ÿÿ€¤óÂS¡ÿÿ!
+pid 8516 state 18446639977774348120 comm øvÂFS¡ÿÿ€¤óÂS¡ÿÿD!
+pid 8704 state 18446639977774348152 comm wÂFS¡ÿÿ€(ôÂS¡ÿÿ
+pid 8740 state 18446639977774348184 comm 8wÂFS¡ÿÿ€ˆóÂS¡ÿÿ$"
+pid 8760 state 18446639977774348312 comm XwÂFS¡ÿÿ€ôÂS¡ÿÿ8"
+pid 8800 state 18446639977774349232 comm xwÂFS¡ÿÿ€\Ñ\S¡ÿÿ`"
+pid 0 state 0 comm ğ{}A§²ÿÿ
+pid 1 state 18446639977774349296 comm 
+pid 4117766756 state 18446639977774348344 comm €»k÷S¡ÿÿ€™óS¡ÿÿd"põS¡ÿÿ8xÂFS¡ÿÿ˜wÂFS¡ÿÿ€(ôÂS¡ÿÿø"
+pid 8952 state 18446639977774348376 comm ˜wÂFS¡ÿÿ€(ôÂS¡ÿÿø"
+pid 8972 state 18446639977774348408 comm xÂFS¡ÿÿ€\Ñ\S¡ÿÿ#
+pid 8992 state 18446639977774348512 comm 8xÂFS¡ÿÿ€\Ñ\S¡ÿÿ #
+pid 9052 state 18446639977774348704 comm XxÂFS¡ÿÿ€\Ñ\S¡ÿÿ\#
+pid 0 state 18446639977830422656 comm vÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1243224192 state 9072 comm 
+pid 1243224192 state 9092 comm  yÂFS¡ÿÿàxÂFS¡ÿÿ€JS¡ÿÿ„#
+pid 1243224192 state 9136 comm @yÂFS¡ÿÿ
+pid 1557224576 state 9180 comm `yÂFS¡ÿÿ yÂFS¡ÿÿ€\Ñ\S¡ÿÿÜ#
+pid 1557224576 state 9252 comm €yÂFS¡ÿÿ@yÂFS¡ÿÿ€\Ñ\S¡ÿÿ$$
+pid 1557224576 state 9292 comm èyÂFS¡ÿÿ`yÂFS¡ÿÿ€\Ñ\S¡ÿÿL$
+pid 0 state 0 comm ˆzÂFS¡ÿÿ˜xÂFS¡ÿÿ
+pid 0 state 0 comm €6ã\S¡ÿÿ
+pid 1187150208 state 18446639978145592960 comm 
+pid 1187150312 state 18446639978145592960 comm `$
+pid 1187150344 state 18446639978145592960 comm t$
+pid 1187150376 state 18446639978144423040 comm  $
+pid 1187150408 state 18446639978144423040 comm Ø$
+pid 1187150240 state 0 comm  %
+pid 0 state 0 comm 
+pid 1187150576 state 18446639977774348904 comm 
+pid 1187150608 state 18446639977774349008 comm €JS¡ÿÿ4%
+pid 1187150640 state 18446639977774349040 comm €JS¡ÿÿH%
+pid 1187150672 state 18446639977774349072 comm €JS¡ÿÿt%
+pid 1187150704 state 18446639977774349104 comm €(ôÂS¡ÿÿ0&
+pid 1187150736 state 18446639977774349136 comm €ˆóÂS¡ÿÿT&
+pid 1187150864 state 18446639977774349168 comm €ôÂS¡ÿÿh&
+pid 1244585312 state 18446639977774348216 comm €¶ÆS¡ÿÿ&
+pid 0 state 0 comm 
+pid 1244585376 state 18446639977774348280 comm € ™óS¡ÿÿ
+pid 1187150896 state 18446639977774349200 comm € ™óS¡ÿÿ”&põS¡ÿÿ0|ÂFS¡ÿÿ{ÂFS¡ÿÿ€(ôÂS¡ÿÿ('
+pid 1187150928 state 18446639977774349328 comm €(ôÂS¡ÿÿ('
+pid 1187150960 state 18446639977774349360 comm €¶ÆS¡ÿÿ<'
+pid 1187151064 state 18446639977774349392 comm €¶ÆS¡ÿÿP'
+pid 1187151256 state 18446639977774348936 comm €¶ÆS¡ÿÿŒ'
+pid 1243219072 state 0 comm 
+pid 12 state 18446639977774349560 comm 
+pid 10144 state 18446639977774349592 comm p|ÂFS¡ÿÿ€JS¡ÿÿ '
+pid 10164 state 18446639977774349624 comm Ø|ÂFS¡ÿÿ€JS¡ÿÿ´'
+pid 10208 state 18446639977774349656 comm ø|ÂFS¡ÿÿ€JS¡ÿÿà'
+pid 10252 state 18446639977774349688 comm }ÂFS¡ÿÿ€¶ÆS¡ÿÿ(
+pid 10324 state 18446639977774349792 comm 8}ÂFS¡ÿÿ€¶ÆS¡ÿÿT(
+pid 10364 state 18446639977774349952 comm X}ÂFS¡ÿÿ€¶ÆS¡ÿÿ|(
+pid 0 state 18446639977832742528 comm |ÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1245544064 state 10384 comm 
+pid 1245544064 state 10404 comm  ~ÂFS¡ÿÿà}ÂFS¡ÿÿ€~=JS¡ÿÿ¤(
+pid 1245544064 state 10448 comm @~ÂFS¡ÿÿ
+pid 3323704960 state 10504 comm `~ÂFS¡ÿÿ ~ÂFS¡ÿÿ€¶ÆS¡ÿÿ)
+pid 3323704960 state 10576 comm È~ÂFS¡ÿÿ@~ÂFS¡ÿÿ€¶ÆS¡ÿÿP)
+STARTING ITERATION NUMBER 1 WITH COUNTER 285565
+pid 1679 state 0 comm test_chronology
+pid 1679 state 260 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 3270781056 state 6592 comm  pÂFS¡ÿÿˆ/JS¡ÿÿ€(ôÂS¡ÿÿÀ
+pid 3270740096 state 6628 comm @pÂFS¡ÿÿ
+pid 3270771840 state 6648 comm `pÂFS¡ÿÿ pÂFS¡ÿÿ€ôÂS¡ÿÿø
+pid 3270781056 state 6824 comm ÈpÂFS¡ÿÿ@pÂFS¡ÿÿ€(ôÂS¡ÿÿ¨
+pid 0 state 0 comm (qÂFS¡ÿÿ
+pid 0 state 0 comm €|Ñ\S¡ÿÿ
+pid 1187147872 state 18446639978144431232 comm 
+pid 1187147976 state 18446639978144431232 comm ¼
+pid 1187148008 state 18446639978144431232 comm Ğ
+pid 1187147904 state 0 comm 
+pid 0 state 0 comm 
+pid 1187148176 state 18446639977774346504 comm 
+pid 1187148208 state 18446639977774346608 comm €hÑ\S¡ÿÿ 
+pid 1187148240 state 18446639977774346640 comm €hÑ\S¡ÿÿ4
+pid 1187148272 state 18446639977774346672 comm €hÑ\S¡ÿÿ`
+pid 1187148304 state 18446639977774346704 comm €|Ñ\S¡ÿÿŒ
+pid 1187148408 state 18446639977774346736 comm €|Ñ\S¡ÿÿÔ
+pid 1187148568 state 18446639977774346536 comm €|Ñ\S¡ÿÿü
+pid 1245542528 state 0 comm 
+pid 12 state 18446639977774346904 comm 
+pid 7184 state 18446639977774346936 comm rÂFS¡ÿÿ€x=JS¡ÿÿ
+pid 7204 state 18446639977774346968 comm xrÂFS¡ÿÿ€x=JS¡ÿÿ$
+pid 7248 state 18446639977774347000 comm ˜rÂFS¡ÿÿ€x=JS¡ÿÿP
+pid 7304 state 18446639977774347104 comm ¸rÂFS¡ÿÿ€|Ñ\S¡ÿÿˆ
+pid 7376 state 18446639977774347424 comm ØrÂFS¡ÿÿ€|Ñ\S¡ÿÿĞ
+pid 0 state 18446639977832739968 comm 0rÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1245541504 state 7396 comm €sÂFS¡ÿÿørÂFS¡ÿÿ€t=JS¡ÿÿä
+pid 1245541504 state 7416 comm  sÂFS¡ÿÿ`sÂFS¡ÿÿ€t=JS¡ÿÿø
+pid 1245541504 state 7460 comm ÀsÂFS¡ÿÿ€sÂFS¡ÿÿ€t=JS¡ÿÿ$
+pid 3270781056 state 7648 comm àsÂFS¡ÿÿ sÂFS¡ÿÿ€(ôÂS¡ÿÿà
+pid 3270740096 state 7684 comm 
+pid 3270771840 state 7704 comm  tÂFS¡ÿÿàsÂFS¡ÿÿ€ôÂS¡ÿÿ
+pid 3270781056 state 7880 comm @tÂFS¡ÿÿ
+pid 4136907904 state 7900 comm `tÂFS¡ÿÿ tÂFS¡ÿÿ€4”öS¡ÿÿÜ
+pid 4136907904 state 7920 comm €tÂFS¡ÿÿ@tÂFS¡ÿÿ€4”öS¡ÿÿğ
+pid 4136907904 state 7980 comm ètÂFS¡ÿÿ`tÂFS¡ÿÿ€4”öS¡ÿÿ,
+pid 0 state 0 comm ¨uÂFS¡ÿÿsÂFS¡ÿÿ
+pid 0 state 0 comm €JS¡ÿÿ
+pid 1187148928 state 18446639977830421120 comm 
+pid 1187149032 state 18446639977830421120 comm @
+pid 1187149064 state 18446639977830421120 comm T
+pid 1187149096 state 18446639980724106368 comm €
+pid 1187149128 state 18446639980724106368 comm ¬
+pid 1187149160 state 18446639980724106368 comm ô
+pid 1187148960 state 0 comm  
+pid 0 state 0 comm 
+pid 1187149328 state 18446639977774347656 comm 
+pid 1187149360 state 18446639977774347760 comm €\óÂS¡ÿÿ0 
+pid 1187149392 state 18446639977774347792 comm €\óÂS¡ÿÿD 
+pid 1187149424 state 18446639977774347824 comm €\óÂS¡ÿÿp 
+pid 1187149528 state 18446639977774347856 comm €4”öS¡ÿÿ¨ 
+pid 1187149976 state 18446639977774347688 comm €4”öS¡ÿÿğ 
+pid 3270747264 state 0 comm 
+pid 12 state 18446639977774348024 comm 
+pid 8452 state 18446639977774348056 comm pvÂFS¡ÿÿ€¤óÂS¡ÿÿ!
+pid 8472 state 18446639977774348088 comm ØvÂFS¡ÿÿ€¤óÂS¡ÿÿ!
+pid 8516 state 18446639977774348120 comm øvÂFS¡ÿÿ€¤óÂS¡ÿÿD!
+pid 8704 state 18446639977774348152 comm wÂFS¡ÿÿ€(ôÂS¡ÿÿ
+pid 8740 state 18446639977774348184 comm 8wÂFS¡ÿÿ€ˆóÂS¡ÿÿ$"
+pid 8760 state 18446639977774348312 comm XwÂFS¡ÿÿ€ôÂS¡ÿÿ8"
+pid 8800 state 18446639977774349232 comm xwÂFS¡ÿÿ€\Ñ\S¡ÿÿ`"
+pid 0 state 0 comm ğ{}A§²ÿÿ
+pid 1 state 18446639977774349296 comm 
+pid 4117766756 state 18446639977774348344 comm €»k÷S¡ÿÿ€™óS¡ÿÿd"põS¡ÿÿ8xÂFS¡ÿÿ˜wÂFS¡ÿÿ€(ôÂS¡ÿÿø"
+pid 8952 state 18446639977774348376 comm ˜wÂFS¡ÿÿ€(ôÂS¡ÿÿø"
+pid 8972 state 18446639977774348408 comm xÂFS¡ÿÿ€\Ñ\S¡ÿÿ#
+pid 8992 state 18446639977774348512 comm 8xÂFS¡ÿÿ€\Ñ\S¡ÿÿ #
+pid 9052 state 18446639977774348704 comm XxÂFS¡ÿÿ€\Ñ\S¡ÿÿ\#
+pid 0 state 18446639977830422656 comm vÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1243224192 state 9072 comm 
+pid 1243224192 state 9092 comm  yÂFS¡ÿÿàxÂFS¡ÿÿ€JS¡ÿÿ„#
+pid 1243224192 state 9136 comm @yÂFS¡ÿÿ
+pid 1557224576 state 9180 comm `yÂFS¡ÿÿ yÂFS¡ÿÿ€\Ñ\S¡ÿÿÜ#
+pid 1557224576 state 9252 comm €yÂFS¡ÿÿ@yÂFS¡ÿÿ€\Ñ\S¡ÿÿ$$
+pid 1557224576 state 9292 comm èyÂFS¡ÿÿ`yÂFS¡ÿÿ€\Ñ\S¡ÿÿL$
+pid 0 state 0 comm ˆzÂFS¡ÿÿ˜xÂFS¡ÿÿ
+pid 0 state 0 comm €6ã\S¡ÿÿ
+pid 1187150208 state 18446639978145592960 comm 
+pid 1187150312 state 18446639978145592960 comm `$
+pid 1187150344 state 18446639978145592960 comm t$
+pid 1187150376 state 18446639978144423040 comm  $
+pid 1187150408 state 18446639978144423040 comm Ø$
+pid 1187150240 state 0 comm  %
+pid 0 state 0 comm 
+pid 1187150576 state 18446639977774348904 comm 
+pid 1187150608 state 18446639977774349008 comm €JS¡ÿÿ4%
+pid 1187150640 state 18446639977774349040 comm €JS¡ÿÿH%
+pid 1187150672 state 18446639977774349072 comm €JS¡ÿÿt%
+pid 1187150704 state 18446639977774349104 comm €(ôÂS¡ÿÿ0&
+pid 1187150736 state 18446639977774349136 comm €ˆóÂS¡ÿÿT&
+pid 1187150864 state 18446639977774349168 comm €ôÂS¡ÿÿh&
+pid 1244585312 state 18446639977774348216 comm €¶ÆS¡ÿÿ&
+pid 0 state 0 comm 
+pid 1244585376 state 18446639977774348280 comm € ™óS¡ÿÿ
+pid 1187150896 state 18446639977774349200 comm € ™óS¡ÿÿ”&põS¡ÿÿ0|ÂFS¡ÿÿ{ÂFS¡ÿÿ€(ôÂS¡ÿÿ('
+pid 1187150928 state 18446639977774349328 comm €(ôÂS¡ÿÿ('
+pid 1187150960 state 18446639977774349360 comm €¶ÆS¡ÿÿ<'
+pid 1187151064 state 18446639977774349392 comm €¶ÆS¡ÿÿP'
+pid 1187151256 state 18446639977774348936 comm €¶ÆS¡ÿÿŒ'
+pid 1243219072 state 0 comm 
+pid 12 state 18446639977774349560 comm 
+pid 10144 state 18446639977774349592 comm p|ÂFS¡ÿÿ€JS¡ÿÿ '
+pid 10164 state 18446639977774349624 comm Ø|ÂFS¡ÿÿ€JS¡ÿÿ´'
+pid 10208 state 18446639977774349656 comm ø|ÂFS¡ÿÿ€JS¡ÿÿà'
+pid 10252 state 18446639977774349688 comm }ÂFS¡ÿÿ€¶ÆS¡ÿÿ(
+pid 10324 state 18446639977774349792 comm 8}ÂFS¡ÿÿ€¶ÆS¡ÿÿT(
+pid 10364 state 18446639977774349952 comm X}ÂFS¡ÿÿ€¶ÆS¡ÿÿ|(
+pid 0 state 18446639977832742528 comm |ÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1245544064 state 10384 comm 
+pid 1245544064 state 10404 comm  ~ÂFS¡ÿÿà}ÂFS¡ÿÿ€~=JS¡ÿÿ¤(
+pid 1245544064 state 10448 comm @~ÂFS¡ÿÿ
+pid 3323704960 state 10504 comm `~ÂFS¡ÿÿ ~ÂFS¡ÿÿ€¶ÆS¡ÿÿ)
+pid 3323704960 state 10576 comm È~ÂFS¡ÿÿ@~ÂFS¡ÿÿ€¶ÆS¡ÿÿP)
+STARTING ITERATION NUMBER 2 WITH COUNTER 286065
+pid 1679 state 0 comm test_chronology
+pid 1679 state 260 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 3270781056 state 6592 comm  pÂFS¡ÿÿˆ/JS¡ÿÿ€(ôÂS¡ÿÿÀ
+pid 3270740096 state 6628 comm @pÂFS¡ÿÿ
+pid 3270771840 state 6648 comm `pÂFS¡ÿÿ pÂFS¡ÿÿ€ôÂS¡ÿÿø
+pid 3270781056 state 6824 comm ÈpÂFS¡ÿÿ@pÂFS¡ÿÿ€(ôÂS¡ÿÿ¨
+pid 0 state 0 comm (qÂFS¡ÿÿ
+pid 0 state 0 comm €|Ñ\S¡ÿÿ
+pid 1187147872 state 18446639978144431232 comm 
+pid 1187147976 state 18446639978144431232 comm ¼
+pid 1187148008 state 18446639978144431232 comm Ğ
+pid 1187147904 state 0 comm 
+pid 0 state 0 comm 
+pid 1187148176 state 18446639977774346504 comm 
+pid 1187148208 state 18446639977774346608 comm €hÑ\S¡ÿÿ 
+pid 1187148240 state 18446639977774346640 comm €hÑ\S¡ÿÿ4
+pid 1187148272 state 18446639977774346672 comm €hÑ\S¡ÿÿ`
+pid 1187148304 state 18446639977774346704 comm €|Ñ\S¡ÿÿŒ
+pid 1187148408 state 18446639977774346736 comm €|Ñ\S¡ÿÿÔ
+pid 1187148568 state 18446639977774346536 comm €|Ñ\S¡ÿÿü
+pid 1245542528 state 0 comm 
+pid 12 state 18446639977774346904 comm 
+pid 7184 state 18446639977774346936 comm rÂFS¡ÿÿ€x=JS¡ÿÿ
+pid 7204 state 18446639977774346968 comm xrÂFS¡ÿÿ€x=JS¡ÿÿ$
+pid 7248 state 18446639977774347000 comm ˜rÂFS¡ÿÿ€x=JS¡ÿÿP
+pid 7304 state 18446639977774347104 comm ¸rÂFS¡ÿÿ€|Ñ\S¡ÿÿˆ
+pid 7376 state 18446639977774347424 comm ØrÂFS¡ÿÿ€|Ñ\S¡ÿÿĞ
+pid 0 state 18446639977832739968 comm 0rÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1245541504 state 7396 comm €sÂFS¡ÿÿørÂFS¡ÿÿ€t=JS¡ÿÿä
+pid 1245541504 state 7416 comm  sÂFS¡ÿÿ`sÂFS¡ÿÿ€t=JS¡ÿÿø
+pid 1245541504 state 7460 comm ÀsÂFS¡ÿÿ€sÂFS¡ÿÿ€t=JS¡ÿÿ$
+pid 3270781056 state 7648 comm àsÂFS¡ÿÿ sÂFS¡ÿÿ€(ôÂS¡ÿÿà
+pid 3270740096 state 7684 comm 
+pid 3270771840 state 7704 comm  tÂFS¡ÿÿàsÂFS¡ÿÿ€ôÂS¡ÿÿ
+pid 3270781056 state 7880 comm @tÂFS¡ÿÿ
+pid 4136907904 state 7900 comm `tÂFS¡ÿÿ tÂFS¡ÿÿ€4”öS¡ÿÿÜ
+pid 4136907904 state 7920 comm €tÂFS¡ÿÿ@tÂFS¡ÿÿ€4”öS¡ÿÿğ
+pid 4136907904 state 7980 comm ètÂFS¡ÿÿ`tÂFS¡ÿÿ€4”öS¡ÿÿ,
+pid 0 state 0 comm ¨uÂFS¡ÿÿsÂFS¡ÿÿ
+pid 0 state 0 comm €JS¡ÿÿ
+pid 1187148928 state 18446639977830421120 comm 
+pid 1187149032 state 18446639977830421120 comm @
+pid 1187149064 state 18446639977830421120 comm T
+pid 1187149096 state 18446639980724106368 comm €
+pid 1187149128 state 18446639980724106368 comm ¬
+pid 1187149160 state 18446639980724106368 comm ô
+pid 1187148960 state 0 comm  
+pid 0 state 0 comm 
+pid 1187149328 state 18446639977774347656 comm 
+pid 1187149360 state 18446639977774347760 comm €\óÂS¡ÿÿ0 
+pid 1187149392 state 18446639977774347792 comm €\óÂS¡ÿÿD 
+pid 1187149424 state 18446639977774347824 comm €\óÂS¡ÿÿp 
+pid 1187149528 state 18446639977774347856 comm €4”öS¡ÿÿ¨ 
+pid 1187149976 state 18446639977774347688 comm €4”öS¡ÿÿğ 
+pid 3270747264 state 0 comm 
+pid 12 state 18446639977774348024 comm 
+pid 8452 state 18446639977774348056 comm pvÂFS¡ÿÿ€¤óÂS¡ÿÿ!
+pid 8472 state 18446639977774348088 comm ØvÂFS¡ÿÿ€¤óÂS¡ÿÿ!
+pid 8516 state 18446639977774348120 comm øvÂFS¡ÿÿ€¤óÂS¡ÿÿD!
+pid 8704 state 18446639977774348152 comm wÂFS¡ÿÿ€(ôÂS¡ÿÿ
+pid 8740 state 18446639977774348184 comm 8wÂFS¡ÿÿ€ˆóÂS¡ÿÿ$"
+pid 8760 state 18446639977774348312 comm XwÂFS¡ÿÿ€ôÂS¡ÿÿ8"
+pid 8800 state 18446639977774349232 comm xwÂFS¡ÿÿ€\Ñ\S¡ÿÿ`"
+pid 0 state 0 comm ğ{}A§²ÿÿ
+pid 1 state 18446639977774349296 comm 
+pid 4117766756 state 18446639977774348344 comm €»k÷S¡ÿÿ€™óS¡ÿÿd"põS¡ÿÿ8xÂFS¡ÿÿ˜wÂFS¡ÿÿ€(ôÂS¡ÿÿø"
+pid 8952 state 18446639977774348376 comm ˜wÂFS¡ÿÿ€(ôÂS¡ÿÿø"
+pid 8972 state 18446639977774348408 comm xÂFS¡ÿÿ€\Ñ\S¡ÿÿ#
+pid 8992 state 18446639977774348512 comm 8xÂFS¡ÿÿ€\Ñ\S¡ÿÿ #
+pid 9052 state 18446639977774348704 comm XxÂFS¡ÿÿ€\Ñ\S¡ÿÿ\#
+pid 0 state 18446639977830422656 comm vÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1243224192 state 9072 comm 
+pid 1243224192 state 9092 comm  yÂFS¡ÿÿàxÂFS¡ÿÿ€JS¡ÿÿ„#
+pid 1243224192 state 9136 comm @yÂFS¡ÿÿ
+pid 1557224576 state 9180 comm `yÂFS¡ÿÿ yÂFS¡ÿÿ€\Ñ\S¡ÿÿÜ#
+pid 1557224576 state 9252 comm €yÂFS¡ÿÿ@yÂFS¡ÿÿ€\Ñ\S¡ÿÿ$$
+pid 1557224576 state 9292 comm èyÂFS¡ÿÿ`yÂFS¡ÿÿ€\Ñ\S¡ÿÿL$
+pid 0 state 0 comm ˆzÂFS¡ÿÿ˜xÂFS¡ÿÿ
+pid 0 state 0 comm €6ã\S¡ÿÿ
+pid 1187150208 state 18446639978145592960 comm 
+pid 1187150312 state 18446639978145592960 comm `$
+pid 1187150344 state 18446639978145592960 comm t$
+pid 1187150376 state 18446639978144423040 comm  $
+pid 1187150408 state 18446639978144423040 comm Ø$
+pid 1187150240 state 0 comm  %
+pid 0 state 0 comm 
+pid 1187150576 state 18446639977774348904 comm 
+pid 1187150608 state 18446639977774349008 comm €JS¡ÿÿ4%
+pid 1187150640 state 18446639977774349040 comm €JS¡ÿÿH%
+pid 1187150672 state 18446639977774349072 comm €JS¡ÿÿt%
+pid 1187150704 state 18446639977774349104 comm €(ôÂS¡ÿÿ0&
+pid 1187150736 state 18446639977774349136 comm €ˆóÂS¡ÿÿT&
+pid 1187150864 state 18446639977774349168 comm €ôÂS¡ÿÿh&
+pid 1244585312 state 18446639977774348216 comm €¶ÆS¡ÿÿ&
+pid 0 state 0 comm 
+pid 1244585376 state 18446639977774348280 comm € ™óS¡ÿÿ
+pid 1187150896 state 18446639977774349200 comm € ™óS¡ÿÿ”&põS¡ÿÿ0|ÂFS¡ÿÿ{ÂFS¡ÿÿ€(ôÂS¡ÿÿ('
+pid 1187150928 state 18446639977774349328 comm €(ôÂS¡ÿÿ('
+pid 1187150960 state 18446639977774349360 comm €¶ÆS¡ÿÿ<'
+pid 1187151064 state 18446639977774349392 comm €¶ÆS¡ÿÿP'
+pid 1187151256 state 18446639977774348936 comm €¶ÆS¡ÿÿŒ'
+pid 1243219072 state 0 comm 
+pid 12 state 18446639977774349560 comm 
+pid 10144 state 18446639977774349592 comm p|ÂFS¡ÿÿ€JS¡ÿÿ '
+pid 10164 state 18446639977774349624 comm Ø|ÂFS¡ÿÿ€JS¡ÿÿ´'
+pid 10208 state 18446639977774349656 comm ø|ÂFS¡ÿÿ€JS¡ÿÿà'
+pid 10252 state 18446639977774349688 comm }ÂFS¡ÿÿ€¶ÆS¡ÿÿ(
+pid 10324 state 18446639977774349792 comm 8}ÂFS¡ÿÿ€¶ÆS¡ÿÿT(
+pid 10364 state 18446639977774349952 comm X}ÂFS¡ÿÿ€¶ÆS¡ÿÿ|(
+pid 0 state 18446639977832742528 comm |ÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1245544064 state 10384 comm 
+pid 1245544064 state 10404 comm  ~ÂFS¡ÿÿà}ÂFS¡ÿÿ€~=JS¡ÿÿ¤(
+pid 1245544064 state 10448 comm @~ÂFS¡ÿÿ
+pid 3323704960 state 10504 comm `~ÂFS¡ÿÿ ~ÂFS¡ÿÿ€¶ÆS¡ÿÿ)
+pid 3323704960 state 10576 comm È~ÂFS¡ÿÿ@~ÂFS¡ÿÿ€¶ÆS¡ÿÿP)
+STARTING ITERATION NUMBER 3 WITH COUNTER 286565
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 260 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 3270781056 state 6592 comm  pÂFS¡ÿÿˆ/JS¡ÿÿ€(ôÂS¡ÿÿÀ
+pid 3270740096 state 6628 comm @pÂFS¡ÿÿ
+pid 3270771840 state 6648 comm `pÂFS¡ÿÿ pÂFS¡ÿÿ€ôÂS¡ÿÿø
+pid 3270781056 state 6824 comm ÈpÂFS¡ÿÿ@pÂFS¡ÿÿ€(ôÂS¡ÿÿ¨
+pid 0 state 0 comm (qÂFS¡ÿÿ
+pid 0 state 0 comm €|Ñ\S¡ÿÿ
+pid 1187147872 state 18446639978144431232 comm 
+pid 1187147976 state 18446639978144431232 comm ¼
+pid 1187148008 state 18446639978144431232 comm Ğ
+pid 1187147904 state 0 comm 
+pid 0 state 0 comm 
+pid 1187148176 state 18446639977774346504 comm 
+pid 1187148208 state 18446639977774346608 comm €hÑ\S¡ÿÿ 
+pid 1187148240 state 18446639977774346640 comm €hÑ\S¡ÿÿ4
+pid 1187148272 state 18446639977774346672 comm €hÑ\S¡ÿÿ`
+pid 1187148304 state 18446639977774346704 comm €|Ñ\S¡ÿÿŒ
+pid 1187148408 state 18446639977774346736 comm €|Ñ\S¡ÿÿÔ
+pid 1187148568 state 18446639977774346536 comm €|Ñ\S¡ÿÿü
+pid 1245542528 state 0 comm 
+pid 12 state 18446639977774346904 comm 
+pid 7184 state 18446639977774346936 comm rÂFS¡ÿÿ€x=JS¡ÿÿ
+pid 7204 state 18446639977774346968 comm xrÂFS¡ÿÿ€x=JS¡ÿÿ$
+pid 7248 state 18446639977774347000 comm ˜rÂFS¡ÿÿ€x=JS¡ÿÿP
+pid 7304 state 18446639977774347104 comm ¸rÂFS¡ÿÿ€|Ñ\S¡ÿÿˆ
+pid 7376 state 18446639977774347424 comm ØrÂFS¡ÿÿ€|Ñ\S¡ÿÿĞ
+pid 0 state 18446639977832739968 comm 0rÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1245541504 state 7396 comm €sÂFS¡ÿÿørÂFS¡ÿÿ€t=JS¡ÿÿä
+pid 1245541504 state 7416 comm  sÂFS¡ÿÿ`sÂFS¡ÿÿ€t=JS¡ÿÿø
+pid 1245541504 state 7460 comm ÀsÂFS¡ÿÿ€sÂFS¡ÿÿ€t=JS¡ÿÿ$
+pid 3270781056 state 7648 comm àsÂFS¡ÿÿ sÂFS¡ÿÿ€(ôÂS¡ÿÿà
+pid 3270740096 state 7684 comm 
+pid 3270771840 state 7704 comm  tÂFS¡ÿÿàsÂFS¡ÿÿ€ôÂS¡ÿÿ
+pid 3270781056 state 7880 comm @tÂFS¡ÿÿ
+pid 4136907904 state 7900 comm `tÂFS¡ÿÿ tÂFS¡ÿÿ€4”öS¡ÿÿÜ
+pid 4136907904 state 7920 comm €tÂFS¡ÿÿ@tÂFS¡ÿÿ€4”öS¡ÿÿğ
+pid 4136907904 state 7980 comm ètÂFS¡ÿÿ`tÂFS¡ÿÿ€4”öS¡ÿÿ,
+pid 0 state 0 comm ¨uÂFS¡ÿÿsÂFS¡ÿÿ
+pid 0 state 0 comm €JS¡ÿÿ
+pid 1187148928 state 18446639977830421120 comm 
+pid 1187149032 state 18446639977830421120 comm @
+pid 1187149064 state 18446639977830421120 comm T
+pid 1187149096 state 18446639980724106368 comm €
+pid 1187149128 state 18446639980724106368 comm ¬
+pid 1187149160 state 18446639980724106368 comm ô
+pid 1187148960 state 0 comm  
+pid 0 state 0 comm 
+pid 1187149328 state 18446639977774347656 comm 
+pid 1187149360 state 18446639977774347760 comm €\óÂS¡ÿÿ0 
+pid 1187149392 state 18446639977774347792 comm €\óÂS¡ÿÿD 
+pid 1187149424 state 18446639977774347824 comm €\óÂS¡ÿÿp 
+pid 1187149528 state 18446639977774347856 comm €4”öS¡ÿÿ¨ 
+pid 1187149976 state 18446639977774347688 comm €4”öS¡ÿÿğ 
+pid 3270747264 state 0 comm 
+pid 12 state 18446639977774348024 comm 
+pid 8452 state 18446639977774348056 comm pvÂFS¡ÿÿ€¤óÂS¡ÿÿ!
+pid 8472 state 18446639977774348088 comm ØvÂFS¡ÿÿ€¤óÂS¡ÿÿ!
+pid 8516 state 18446639977774348120 comm øvÂFS¡ÿÿ€¤óÂS¡ÿÿD!
+pid 8704 state 18446639977774348152 comm wÂFS¡ÿÿ€(ôÂS¡ÿÿ
+pid 8740 state 18446639977774348184 comm 8wÂFS¡ÿÿ€ˆóÂS¡ÿÿ$"
+pid 8760 state 18446639977774348312 comm XwÂFS¡ÿÿ€ôÂS¡ÿÿ8"
+pid 8800 state 18446639977774349232 comm xwÂFS¡ÿÿ€\Ñ\S¡ÿÿ`"
+pid 0 state 0 comm ğ{}A§²ÿÿ
+pid 1 state 18446639977774349296 comm 
+pid 4117766756 state 18446639977774348344 comm €»k÷S¡ÿÿ€™óS¡ÿÿd"põS¡ÿÿ8xÂFS¡ÿÿ˜wÂFS¡ÿÿ€(ôÂS¡ÿÿø"
+pid 8952 state 18446639977774348376 comm ˜wÂFS¡ÿÿ€(ôÂS¡ÿÿø"
+pid 8972 state 18446639977774348408 comm xÂFS¡ÿÿ€\Ñ\S¡ÿÿ#
+pid 8992 state 18446639977774348512 comm 8xÂFS¡ÿÿ€\Ñ\S¡ÿÿ #
+pid 9052 state 18446639977774348704 comm XxÂFS¡ÿÿ€\Ñ\S¡ÿÿ\#
+pid 0 state 18446639977830422656 comm vÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1243224192 state 9072 comm 
+pid 1243224192 state 9092 comm  yÂFS¡ÿÿàxÂFS¡ÿÿ€JS¡ÿÿ„#
+pid 1243224192 state 9136 comm @yÂFS¡ÿÿ
+pid 1557224576 state 9180 comm `yÂFS¡ÿÿ yÂFS¡ÿÿ€\Ñ\S¡ÿÿÜ#
+pid 1557224576 state 9252 comm €yÂFS¡ÿÿ@yÂFS¡ÿÿ€\Ñ\S¡ÿÿ$$
+pid 1557224576 state 9292 comm èyÂFS¡ÿÿ`yÂFS¡ÿÿ€\Ñ\S¡ÿÿL$
+pid 0 state 0 comm ˆzÂFS¡ÿÿ˜xÂFS¡ÿÿ
+pid 0 state 0 comm €6ã\S¡ÿÿ
+pid 1187150208 state 18446639978145592960 comm 
+pid 1187150312 state 18446639978145592960 comm `$
+pid 1187150344 state 18446639978145592960 comm t$
+pid 1187150376 state 18446639978144423040 comm  $
+pid 1187150408 state 18446639978144423040 comm Ø$
+pid 1187150240 state 0 comm  %
+pid 0 state 0 comm 
+pid 1187150576 state 18446639977774348904 comm 
+pid 1187150608 state 18446639977774349008 comm €JS¡ÿÿ4%
+pid 1187150640 state 18446639977774349040 comm €JS¡ÿÿH%
+pid 1187150672 state 18446639977774349072 comm €JS¡ÿÿt%
+pid 1187150704 state 18446639977774349104 comm €(ôÂS¡ÿÿ0&
+pid 1187150736 state 18446639977774349136 comm €ˆóÂS¡ÿÿT&
+pid 1187150864 state 18446639977774349168 comm €ôÂS¡ÿÿh&
+pid 1244585312 state 18446639977774348216 comm €¶ÆS¡ÿÿ&
+pid 0 state 0 comm 
+pid 1244585376 state 18446639977774348280 comm € ™óS¡ÿÿ
+pid 1187150896 state 18446639977774349200 comm € ™óS¡ÿÿ”&põS¡ÿÿ0|ÂFS¡ÿÿ{ÂFS¡ÿÿ€(ôÂS¡ÿÿ('
+pid 1187150928 state 18446639977774349328 comm €(ôÂS¡ÿÿ('
+pid 1187150960 state 18446639977774349360 comm €¶ÆS¡ÿÿ<'
+pid 1187151064 state 18446639977774349392 comm €¶ÆS¡ÿÿP'
+pid 1187151256 state 18446639977774348936 comm €¶ÆS¡ÿÿŒ'
+pid 1243219072 state 0 comm 
+pid 12 state 18446639977774349560 comm 
+pid 10144 state 18446639977774349592 comm p|ÂFS¡ÿÿ€JS¡ÿÿ '
+pid 10164 state 18446639977774349624 comm Ø|ÂFS¡ÿÿ€JS¡ÿÿ´'
+pid 10208 state 18446639977774349656 comm ø|ÂFS¡ÿÿ€JS¡ÿÿà'
+pid 10252 state 18446639977774349688 comm }ÂFS¡ÿÿ€¶ÆS¡ÿÿ(
+pid 10324 state 18446639977774349792 comm 8}ÂFS¡ÿÿ€¶ÆS¡ÿÿT(
+pid 10364 state 18446639977774349952 comm X}ÂFS¡ÿÿ€¶ÆS¡ÿÿ|(
+pid 0 state 18446639977832742528 comm |ÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1245544064 state 10384 comm 
+pid 1245544064 state 10404 comm  ~ÂFS¡ÿÿà}ÂFS¡ÿÿ€~=JS¡ÿÿ¤(
+pid 1245544064 state 10448 comm @~ÂFS¡ÿÿ
+pid 3323704960 state 10504 comm `~ÂFS¡ÿÿ ~ÂFS¡ÿÿ€¶ÆS¡ÿÿ)
+pid 3323704960 state 10576 comm È~ÂFS¡ÿÿ@~ÂFS¡ÿÿ€¶ÆS¡ÿÿP)
+STARTING ITERATION NUMBER 4 WITH COUNTER 287065
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 260 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 1679 state 0 comm test_chronology
+pid 1679 state 1 comm test_chronology
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 0 state 0 comm 
+pid 3270781056 state 6592 comm  pÂFS¡ÿÿˆ/JS¡ÿÿ€(ôÂS¡ÿÿÀ
+pid 3270740096 state 6628 comm @pÂFS¡ÿÿ
+pid 3270771840 state 6648 comm `pÂFS¡ÿÿ pÂFS¡ÿÿ€ôÂS¡ÿÿø
+pid 3270781056 state 6824 comm ÈpÂFS¡ÿÿ@pÂFS¡ÿÿ€(ôÂS¡ÿÿ¨
+pid 0 state 0 comm (qÂFS¡ÿÿ
+pid 0 state 0 comm €|Ñ\S¡ÿÿ
+pid 1187147872 state 18446639978144431232 comm 
+pid 1187147976 state 18446639978144431232 comm ¼
+pid 1187148008 state 18446639978144431232 comm Ğ
+pid 1187147904 state 0 comm 
+pid 0 state 0 comm 
+pid 1187148176 state 18446639977774346504 comm 
+pid 1187148208 state 18446639977774346608 comm €hÑ\S¡ÿÿ 
+pid 1187148240 state 18446639977774346640 comm €hÑ\S¡ÿÿ4
+pid 1187148272 state 18446639977774346672 comm €hÑ\S¡ÿÿ`
+pid 1187148304 state 18446639977774346704 comm €|Ñ\S¡ÿÿŒ
+pid 1187148408 state 18446639977774346736 comm €|Ñ\S¡ÿÿÔ
+pid 1187148568 state 18446639977774346536 comm €|Ñ\S¡ÿÿü
+pid 1245542528 state 0 comm 
+pid 12 state 18446639977774346904 comm 
+pid 7184 state 18446639977774346936 comm rÂFS¡ÿÿ€x=JS¡ÿÿ
+pid 7204 state 18446639977774346968 comm xrÂFS¡ÿÿ€x=JS¡ÿÿ$
+pid 7248 state 18446639977774347000 comm ˜rÂFS¡ÿÿ€x=JS¡ÿÿP
+pid 7304 state 18446639977774347104 comm ¸rÂFS¡ÿÿ€|Ñ\S¡ÿÿˆ
+pid 7376 state 18446639977774347424 comm ØrÂFS¡ÿÿ€|Ñ\S¡ÿÿĞ
+pid 0 state 18446639977832739968 comm 0rÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1245541504 state 7396 comm €sÂFS¡ÿÿørÂFS¡ÿÿ€t=JS¡ÿÿä
+pid 1245541504 state 7416 comm  sÂFS¡ÿÿ`sÂFS¡ÿÿ€t=JS¡ÿÿø
+pid 1245541504 state 7460 comm ÀsÂFS¡ÿÿ€sÂFS¡ÿÿ€t=JS¡ÿÿ$
+pid 3270781056 state 7648 comm àsÂFS¡ÿÿ sÂFS¡ÿÿ€(ôÂS¡ÿÿà
+pid 3270740096 state 7684 comm 
+pid 3270771840 state 7704 comm  tÂFS¡ÿÿàsÂFS¡ÿÿ€ôÂS¡ÿÿ
+pid 3270781056 state 7880 comm @tÂFS¡ÿÿ
+pid 4136907904 state 7900 comm `tÂFS¡ÿÿ tÂFS¡ÿÿ€4”öS¡ÿÿÜ
+pid 4136907904 state 7920 comm €tÂFS¡ÿÿ@tÂFS¡ÿÿ€4”öS¡ÿÿğ
+pid 4136907904 state 7980 comm ètÂFS¡ÿÿ`tÂFS¡ÿÿ€4”öS¡ÿÿ,
+pid 0 state 0 comm ¨uÂFS¡ÿÿsÂFS¡ÿÿ
+pid 0 state 0 comm €JS¡ÿÿ
+pid 1187148928 state 18446639977830421120 comm 
+pid 1187149032 state 18446639977830421120 comm @
+pid 1187149064 state 18446639977830421120 comm T
+pid 1187149096 state 18446639980724106368 comm €
+pid 1187149128 state 18446639980724106368 comm ¬
+pid 1187149160 state 18446639980724106368 comm ô
+pid 1187148960 state 0 comm  
+pid 0 state 0 comm 
+pid 1187149328 state 18446639977774347656 comm 
+pid 1187149360 state 18446639977774347760 comm €\óÂS¡ÿÿ0 
+pid 1187149392 state 18446639977774347792 comm €\óÂS¡ÿÿD 
+pid 1187149424 state 18446639977774347824 comm €\óÂS¡ÿÿp 
+pid 1187149528 state 18446639977774347856 comm €4”öS¡ÿÿ¨ 
+pid 1187149976 state 18446639977774347688 comm €4”öS¡ÿÿğ 
+pid 3270747264 state 0 comm 
+pid 12 state 18446639977774348024 comm 
+pid 8452 state 18446639977774348056 comm pvÂFS¡ÿÿ€¤óÂS¡ÿÿ!
+pid 8472 state 18446639977774348088 comm ØvÂFS¡ÿÿ€¤óÂS¡ÿÿ!
+pid 8516 state 18446639977774348120 comm øvÂFS¡ÿÿ€¤óÂS¡ÿÿD!
+pid 8704 state 18446639977774348152 comm wÂFS¡ÿÿ€(ôÂS¡ÿÿ
+pid 8740 state 18446639977774348184 comm 8wÂFS¡ÿÿ€ˆóÂS¡ÿÿ$"
+pid 8760 state 18446639977774348312 comm XwÂFS¡ÿÿ€ôÂS¡ÿÿ8"
+pid 8800 state 18446639977774349232 comm xwÂFS¡ÿÿ€\Ñ\S¡ÿÿ`"
+pid 0 state 0 comm ğ{}A§²ÿÿ
+pid 1 state 18446639977774349296 comm 
+pid 4117766756 state 18446639977774348344 comm €»k÷S¡ÿÿ€™óS¡ÿÿd"põS¡ÿÿ8xÂFS¡ÿÿ˜wÂFS¡ÿÿ€(ôÂS¡ÿÿø"
+pid 8952 state 18446639977774348376 comm ˜wÂFS¡ÿÿ€(ôÂS¡ÿÿø"
+pid 8972 state 18446639977774348408 comm xÂFS¡ÿÿ€\Ñ\S¡ÿÿ#
+pid 8992 state 18446639977774348512 comm 8xÂFS¡ÿÿ€\Ñ\S¡ÿÿ #
+pid 9052 state 18446639977774348704 comm XxÂFS¡ÿÿ€\Ñ\S¡ÿÿ\#
+pid 0 state 18446639977830422656 comm vÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1243224192 state 9072 comm 
+pid 1243224192 state 9092 comm  yÂFS¡ÿÿàxÂFS¡ÿÿ€JS¡ÿÿ„#
+pid 1243224192 state 9136 comm @yÂFS¡ÿÿ
+pid 1557224576 state 9180 comm `yÂFS¡ÿÿ yÂFS¡ÿÿ€\Ñ\S¡ÿÿÜ#
+pid 1557224576 state 9252 comm €yÂFS¡ÿÿ@yÂFS¡ÿÿ€\Ñ\S¡ÿÿ$$
+pid 1557224576 state 9292 comm èyÂFS¡ÿÿ`yÂFS¡ÿÿ€\Ñ\S¡ÿÿL$
+pid 0 state 0 comm ˆzÂFS¡ÿÿ˜xÂFS¡ÿÿ
+pid 0 state 0 comm €6ã\S¡ÿÿ
+pid 1187150208 state 18446639978145592960 comm 
+pid 1187150312 state 18446639978145592960 comm `$
+pid 1187150344 state 18446639978145592960 comm t$
+pid 1187150376 state 18446639978144423040 comm  $
+pid 1187150408 state 18446639978144423040 comm Ø$
+pid 1187150240 state 0 comm  %
+pid 0 state 0 comm 
+pid 1187150576 state 18446639977774348904 comm 
+pid 1187150608 state 18446639977774349008 comm €JS¡ÿÿ4%
+pid 1187150640 state 18446639977774349040 comm €JS¡ÿÿH%
+pid 1187150672 state 18446639977774349072 comm €JS¡ÿÿt%
+pid 1187150704 state 18446639977774349104 comm €(ôÂS¡ÿÿ0&
+pid 1187150736 state 18446639977774349136 comm €ˆóÂS¡ÿÿT&
+pid 1187150864 state 18446639977774349168 comm €ôÂS¡ÿÿh&
+pid 1244585312 state 18446639977774348216 comm €¶ÆS¡ÿÿ&
+pid 0 state 0 comm 
+pid 1244585376 state 18446639977774348280 comm € ™óS¡ÿÿ
+pid 1187150896 state 18446639977774349200 comm € ™óS¡ÿÿ”&põS¡ÿÿ0|ÂFS¡ÿÿ{ÂFS¡ÿÿ€(ôÂS¡ÿÿ('
+pid 1187150928 state 18446639977774349328 comm €(ôÂS¡ÿÿ('
+pid 1187150960 state 18446639977774349360 comm €¶ÆS¡ÿÿ<'
+pid 1187151064 state 18446639977774349392 comm €¶ÆS¡ÿÿP'
+pid 1187151256 state 18446639977774348936 comm €¶ÆS¡ÿÿŒ'
+pid 1243219072 state 0 comm 
+pid 12 state 18446639977774349560 comm 
+pid 10144 state 18446639977774349592 comm p|ÂFS¡ÿÿ€JS¡ÿÿ '
+pid 10164 state 18446639977774349624 comm Ø|ÂFS¡ÿÿ€JS¡ÿÿ´'
+pid 10208 state 18446639977774349656 comm ø|ÂFS¡ÿÿ€JS¡ÿÿà'
+pid 10252 state 18446639977774349688 comm }ÂFS¡ÿÿ€¶ÆS¡ÿÿ(
+pid 10324 state 18446639977774349792 comm 8}ÂFS¡ÿÿ€¶ÆS¡ÿÿT(
+pid 10364 state 18446639977774349952 comm X}ÂFS¡ÿÿ€¶ÆS¡ÿÿ|(
+pid 0 state 18446639977832742528 comm |ÂFS¡ÿÿ
+pid 0 state 12 comm 
+pid 1245544064 state 10384 comm 
+pid 1245544064 state 10404 comm  ~ÂFS¡ÿÿà}ÂFS¡ÿÿ€~=JS¡ÿÿ¤(
+pid 1245544064 state 10448 comm @~ÂFS¡ÿÿ
+pid 3323704960 state 10504 comm `~ÂFS¡ÿÿ ~ÂFS¡ÿÿ€¶ÆS¡ÿÿ)
+pid 3323704960 state 10576 comm È~ÂFS¡ÿÿ@~ÂFS¡ÿÿ€¶ÆS¡ÿÿP)

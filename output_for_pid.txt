@@ -1,54 +1,54 @@
 PID IS -1
- 302612 
-303112
- buffer state of 0 is 0 and comm is pstrace_thread and pid is 10496
- buffer state of 1 is 0 and comm is irq/16-vmwgfx and pid is 85
- buffer state of 2 is 1 and comm is irq/16-vmwgfx and pid is 85
- buffer state of 3 is 0 and comm is pstrace_thread and pid is 10496
- buffer state of 4 is 0 and comm is pstrace_thread and pid is 10496
- buffer state of 5 is 0 and comm is test_with_arg and pid is 10494
- buffer state of 6 is 1 and comm is orca and pid is 1433
- buffer state of 7 is 0 and comm is rcu_sched and pid is 10
- buffer state of 8 is 1026 and comm is rcu_sched and pid is 10
- buffer state of 9 is 0 and comm is gnome-shell and pid is 1229
- buffer state of 10 is 258 and comm is test_with_arg and pid is 10494
- buffer state of 11 is 0 and comm is null-sink and pid is 1239
- buffer state of 12 is 1 and comm is null-sink and pid is 1239
- buffer state of 13 is 0 and comm is pstrace_thread and pid is 10496
- buffer state of 14 is 16 and comm is pstrace_thread and pid is 10496
- buffer state of 15 is 0 and comm is swapper/1 and pid is 0
- buffer state of 16 is 1 and comm is gnome-shell and pid is 1229
- buffer state of 17 is 0 and comm is kthreadd and pid is 2
- buffer state of 18 is 1 and comm is kthreadd and pid is 2
- buffer state of 19 is 0 and comm is Xorg and pid is 1093
- buffer state of 20 is 0 and comm is swapper/1 and pid is 0
- buffer state of 21 is 0 and comm is kthreadd and pid is 10497
- buffer state of 22 is 2 and comm is kthreadd and pid is 10497
- buffer state of 23 is 0 and comm is test_with_arg and pid is 10494
- buffer state of 24 is 1 and comm is test_with_arg and pid is 10494
- buffer state of 25 is 0 and comm is pstrace_thread and pid is 10497
- buffer state of 26 is 1 and comm is Xorg and pid is 1093
- buffer state of 27 is 0 and comm is gnome-shell and pid is 1229
- buffer state of 28 is 0 and comm is pstrace_thread and pid is 10497
- buffer state of 29 is 0 and comm is null-sink and pid is 1239
- buffer state of 30 is 1 and comm is null-sink and pid is 1239
- buffer state of 31 is 0 and comm is pstrace_thread and pid is 10497
- buffer state of 32 is 1 and comm is gnome-shell and pid is 1229
- buffer state of 33 is 0 and comm is Xorg and pid is 1093
- buffer state of 34 is 0 and comm is pstrace_thread and pid is 10497
- buffer state of 35 is 0 and comm is in:imklog and pid is 558
- buffer state of 36 is 1 and comm is Xorg and pid is 1093
- buffer state of 37 is 0 and comm is systemd-journal and pid is 307
- buffer state of 38 is 1 and comm is in:imklog and pid is 558
- buffer state of 39 is 0 and comm is rs:main Q:Reg and pid is 559
- buffer state of 40 is 1 and comm is rs:main Q:Reg and pid is 559
- buffer state of 41 is 0 and comm is gmain and pid is 486
- buffer state of 42 is 1 and comm is gmain and pid is 486
- buffer state of 43 is 0 and comm is null-sink and pid is 1239
- buffer state of 44 is 1 and comm is null-sink and pid is 1239
- buffer state of 45 is 0 and comm is pstrace_thread and pid is 10497
- buffer state of 46 is 0 and comm is pstrace_thread and pid is 10497
- buffer state of 47 is 0 and comm is irq/16-vmwgfx and pid is 85
- buffer state of 48 is 1 and comm is irq/16-vmwgfx and pid is 85
- buffer state of 49 is 0 and comm is kworker/1:1 and pid is 10027
-NR 303612
+ 3000
+3500
+ buffer state of 0 is 0 and comm is vmtoolsd and pid is 533
+ buffer state of 1 is 16 and comm is pstrace_thread and pid is 1645
+ buffer state of 2 is 0 and comm is test_with_arg and pid is 1644
+ buffer state of 3 is 1 and comm is vmtoolsd and pid is 533
+ buffer state of 4 is 0 and comm is swapper/1 and pid is 0
+ buffer state of 5 is 0 and comm is kthreadd and pid is 2
+ buffer state of 6 is 1 and comm is kthreadd and pid is 2
+ buffer state of 7 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 8 is 0 and comm is swapper/1 and pid is 0
+ buffer state of 9 is 0 and comm is kthreadd and pid is 1646
+ buffer state of 10 is 2 and comm is kthreadd and pid is 1646
+ buffer state of 11 is 0 and comm is swapper/1 and pid is 0
+ buffer state of 12 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 13 is 0 and comm is test_with_arg and pid is 1644
+ buffer state of 14 is 1 and comm is test_with_arg and pid is 1644
+ buffer state of 15 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 16 is 0 and comm is swapper/1 and pid is 0
+ buffer state of 17 is 0 and comm is pstrace_thread and pid is 1646
+ buffer state of 18 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 19 is 0 and comm is rcu_sched and pid is 10
+ buffer state of 20 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 21 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 22 is 0 and comm is rcu_sched and pid is 10
+ buffer state of 23 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 24 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 25 is 0 and comm is rcu_sched and pid is 10
+ buffer state of 26 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 27 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 28 is 0 and comm is rcu_sched and pid is 10
+ buffer state of 29 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 30 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 31 is 0 and comm is rcu_sched and pid is 10
+ buffer state of 32 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 33 is 0 and comm is pstrace_thread and pid is 1646
+ buffer state of 34 is 0 and comm is vmtoolsd and pid is 1382
+ buffer state of 35 is 1 and comm is vmtoolsd and pid is 1382
+ buffer state of 36 is 0 and comm is pstrace_thread and pid is 1646
+ buffer state of 37 is 0 and comm is pstrace_thread and pid is 1646
+ buffer state of 38 is 0 and comm is kworker/1:0 and pid is 16
+ buffer state of 39 is 2 and comm is kworker/1:0 and pid is 16
+ buffer state of 40 is 0 and comm is pstrace_thread and pid is 1646
+ buffer state of 41 is 0 and comm is pstrace_thread and pid is 1646
+ buffer state of 42 is 0 and comm is kworker/1:0 and pid is 16
+ buffer state of 43 is 0 and comm is pstrace_thread and pid is 1646
+ buffer state of 44 is 0 and comm is pstrace_thread and pid is 1646
+ buffer state of 45 is 0 and comm is vmtoolsd and pid is 533
+ buffer state of 46 is 1 and comm is vmtoolsd and pid is 533
+ buffer state of 47 is 0 and comm is pstrace_thread and pid is 1646
+ buffer state of 48 is 0 and comm is swapper/0 and pid is 0
+ buffer state of 49 is 0 and comm is gnome-terminal- and pid is 1487
+NR 4000
