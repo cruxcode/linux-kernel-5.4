@@ -273,6 +273,7 @@ SYSCALL_DEFINE1(pstrace_clear,
 			if (ring_buffer.buf[i].pid == pid) {
 				int j;
 				int k;
+
 				j = i;
 				for (k = current_iteration;
 				k < ring_buffer.current_size;
