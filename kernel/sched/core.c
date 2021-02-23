@@ -2646,8 +2646,10 @@ try_to_wake_up(struct task_struct *p, unsigned int state, int wake_flags)
 unlock:
 	raw_spin_unlock_irqrestore(&p->pi_lock, flags);
 out:
-	if (success)
+	if (success) {
 		ttwu_stat(p, cpu, wake_flags);
+		pstrace_add(p);
+	}
 	preempt_enable();
 
 	return success;
@@ -4077,7 +4079,6 @@ static void __sched notrace __schedule(bool preempt)
 		trace_sched_switch(preempt, prev, next);
 
 		pstrace_add(prev);
-		pstrace_add(next);
 		/* Also unlocks the rq: */
 		rq = context_switch(rq, prev, next, &rf);
 	} else {
