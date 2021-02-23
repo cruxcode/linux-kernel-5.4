@@ -289,7 +289,7 @@ void pstrace_add(struct task_struct *p)
 
 	if ((p->state & __TASK_STOPPED)
 		|| p->state == TASK_INTERRUPTIBLE
-		|| (p->state & TASK_UNINTERRUPTIBLE)
+		|| (p->state == TASK_UNINTERRUPTIBLE)
 		|| p->state == TASK_RUNNING
 		|| p->exit_state == EXIT_DEAD
 		|| p->exit_state == EXIT_ZOMBIE) {
